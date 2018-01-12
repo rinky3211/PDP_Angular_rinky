@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+		<html>
+			<head>
+				<title></title>
+				<link rel="stylesheet" type="text/css" href="styles/main.css"> 
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+			</head>
+			<body>
+			
+			<div ng-controller="myCtrl">
+			 
+			 <div class="navbar">
+				<ul>
+				  <li><a href="#home">Home</a></li>
+				  <li><a href="#news">Product</a></li>
+				  <li><a href="#contact">Contact</a></li>
+				</ul>
+			
+		<div class="search">
+				<form class="navbar-form" role="search" ng-submit="getDetailsByPartNumber(partNumber)">
+			<div class="input-group add-on">
+		 <input class="form-control" placeholder="Search..." name="input" type="text" 
+		 ng-model="partNumber" style="width: 900px;">
+				   <div class="input-group-btn">
+				    <button class="btn btn-default" type="submit">
+			<i class="glyphicon glyphicon-search">
+				        		
+				        	</i></button>
+				      </div>
+			    	</div>
+  				</form>
+  			</div>
+  			</div>
+
+					
+				
+
+		<div class="row">
+						
+		<div class="prodImg-left">
+			<img ng-src="{{productDetails.imageUrls140}}" width="140" height="140" id="mainImage" >
+			<br/>
+						
+		<div class="prodImg-down" ng-repeat="imgUrl in productDetails.imageUrls20" style="margin-top: 5px; float: left; margin-left: 20px; border: 3px grey ">
+			<span><img ng-src="{{imgUrl}}" width="20" height="30"  ng-click="moveImages(event)"/></span>
+			</div>
+						
+
+		 <div class="addToCart" style="margin-top: 40px;">
+		 <button type="button" ng-click="addTocart(productDetails.partNumber)" class="btn btn-primary" data-toggle="modal" style="width:200px; margin-top: 30px;" data-target="#myModal">ADD TO CART</button>
+
+		</div>   
+						 
+		</div>	
+			
+
+			<div class="prodName-center">
+				<span><b>Product Name:</b></span>
+				<i>{{productDetails.productName}}</i>
+				<p><small>Rating  {{ productDetails.Rating}} ({{productDetails.Review}} Reviews)</small></p>
+				<p><b>Price:  ${{ productDetails.price}}</b></p>
+				<p><b>Sold By:   {{ productDetails.soldBy}}</b></p>
+				<p><b>Fullfillment Method* : {{arrivalMethods}}</b></p>
+				<select class="btn btn-primary dropdown-toggle" data-toggle="dropdown" ng-model="arrivalMethods" style="width: 200px; height:40px;" ng-change="fulfillmentChange(arrivalMethods)">
+				<option value=""> SELECT </option>
+	        	<option ng-repeat="arrival in arrivalMethodOptions" value="{{arrival}}" ng-bind="::arrival | uppercase" ng-selected="arrival===arrivalMethods"></option> 
+	     	 	</select> 
+
+	     	 	
+
+
+				
+				<form ng-submit="getInventoryDetail(zipCode,partNumber)">				     	 	
+		 	 	<p><b>Enter zip code to check delievery*</b></p>
+		 	 	<input type="text" placeholder="Enter zip code" ng-model="zipCode" inputnumber type="tel" min="5" max="5" required style="height: 40px;" />
+		 	 	<button class="btn btn-primary" style="height: 40px;">CHECK!</button>
+
+		 	 	<div id="showZipDelivery" ng-show="inventoryItemsVals">
+		 	 		
+		        
+		            <small><strong>In Stock!</strong> From Sears near
+		            <strong><span ng-bind="zipCode"></span></strong>
+		            <p>Earliest Delivery Date:
+		                <span
+		                ng-bind="date">
+		                </span> Schedule delivery time in checkout.</p></small>
+		        
+		        <span ng-show="!inventoryItemsVals">
+		            <p>No delivery dates for this product are available in this area.</p>
+		        </span>
+		         </div>
+		 	 </form>
+			
+		</div> 
+	</div>
+
+
+
+					
+			<div class="selectTab" style="margin-top: 60px;height: 40px;">
+			
+ 			<ul class="ss-tabs-header" ng-init="selectedTab='desc'">
+			<b> 
+			<li ng-click="getDetails('desc')" style="height: 40px; color: white; width:120px;">Description</li>
+	            </b>
+	             <b>
+            <li ng-click="getDetails('spec')" style="height: 40px; color:white;  width:120px">Specification
+                    </li>
+              </b>
+              <b>
+            <li ng-click="getDetails('rev')" style="height: 40px; color:white ; width:120px;">Reviews
+                    </li>
+              </b>
+                    
+              </ul>
+            </div>
+
+		          <div ng-switch on="temp">
+					  <div ng-switch-when="desc" style="overflow: scroll; height: 400px;">
+
+						 <p ng-bind-html="productDetails.descShort"></p>
+						 <p ng-bind-html="productDetails.descLong"></p>
+					 </div>
+			     <div ng-switch-when="spec" style="overflow: scroll;height: 400px; background-color: white;">
+						
+
+			<div class="specifications_box" ng-repeat="specification in productDetails.spec track by $index">
+			<strong><span class="label" ng-bind="::specification.label" style="color: black; font-size: 15px;"></span></strong>
+			<span ng-repeat="attribute in specification.attributes" style="font-size: 12px;line-height: 2;">
+		        <i><p>{{attribute}}</p></i>
+		     </span>
+			</div>
+							  
+					 
+			</div>
+			<div ng-switch-when="rev">
+				<p ng-if="!reviews.data.items || reviews.data.items.length <= 0">No Review Available</p>
+                <div ng-if="reviews.data.items">
+                <div class="review-box" ng-repeat="review in reviews.data.items">
+					<div>
+                        <strong><span class="review-user"><span ng-bind="::review.username"></span> | <span ng-bind="::review.city"></span>, <span ng-bind="::review.state"></span></span></strong>
+                    </div>
+                    <span class="review-rating">
+                        <reviewrating points="review.rating" />
+                    </span>
+                   <span class="scrollable review-content" ng-bind="::review.content" style="line-height: 3px; font-size: 12px;"></span>
+
+                    </div>
+                    </div>
+				
+			</div>
+					<div ng-switch-default></div>
+				</div> 
+		</div>       
+		</body>
+		</html>
+
+
+		 
+
+			
+
+
+				
+
+				 

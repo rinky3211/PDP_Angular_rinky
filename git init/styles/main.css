@@ -1,0 +1,108 @@
+div.search{
+	margin-top: 5px;
+}
+/*.navbar.search.input-group add-on.form-control{
+width: 900px;
+ background-color: #f5f5f5;
+}*/
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    color:white;
+}
+
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+div.prodImg-left{
+  color:red;
+	margin-left: 20px;
+  
+	
+	float: left;
+}
+
+
+.desc{
+margin-left: 400px;
+margin-top: 100px;
+height: 40px; 
+color: white; 
+width:120px;
+}
+.scroable{
+overflow-y: scroll;
+
+}
+
+.prodName-center{
+	margin-top: 5px;
+	 width:370px;
+  height:150px;
+  margin-left: 400px;
+   text-overflow: ellipsis; 
+}
+
+.price-right
+{
+  display: inline-block;
+  max-width: 150px;
+  text-align: left;
+  padding: 50px;
+  background-color: #ddd;
+   max-width: 100%;
+   margin-top: 5px;
+  
+    
+float: right;
+  
+  margin: 15px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+.row{
+    
+    display:inline-block;
+}
+
+
+
+
+.selected {
+    background-color:white;
+    
+    text-decoration: none;
+  
+  } 
+
+  div.selectTab{
+  	margin-top: 100px;
+    margin-top: 60px;
+    height: 40px;
+    
+
+  }
+.form-control{
+  width: 900px; 
+  background-color: #f5f5f5;
+}

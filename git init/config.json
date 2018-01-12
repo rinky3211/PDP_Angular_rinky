@@ -1,0 +1,6278 @@
+[{
+	"search": {
+		"paginationSize": 20,
+		"duressIndex": 50,
+		"scrollPercentage": 0.1,
+		"verticalScrolling": true,
+		"keywordSortBy": {
+			"UNITS_HIGH_TO_LOW": "UNITS HIGH TO LOW",
+			"VIEWS_HIGH_TO_LOW": "VIEWS HIGH TO LOW",
+			"PRICE_LOW_TO_HIGH": "PRICE LOW TO HIGH",
+			"PRICE_HIGH_TO_LOW": "PRICE HIGH TO LOW",
+			"RATING_HIGH_TO_LOW": "RATING HIGH TO LOW",
+			"NEWEST": "NEWEST",
+			"SALE_HIGH_TO_LOW": "SALE HIGH TO LOW",
+			"CLEARANCE_HIGH_TO_LOW": "CLEARANCE HIGH TO LOW",
+			"INSTOCK_HIGH_TO_LOW": "INSTOCK HIGH TO LOW",
+			"ORIGINAL_SORT_ORDER": "ORIGINAL SORT ORDER"
+		},
+		"sortBy": "ORIGINAL_SORT_ORDER"
+	},
+	"BratRule": {
+		"PageType": "category"
+	},
+	"endpoints": {
+		"productsByUPC": "/product/upc",
+		"keywordSearch": "/products/search",
+		"partnumberSearch": "/product/partnumber",
+		"autoFillSearch": "/search",
+		"getCategory": "/products/browse/category",
+		"getDepartments": "/products/browse/departments",
+		"categorySearch": "/products/categorysearch",
+		"createCart": "/",
+		"getCartDetails": "/",
+		"addItemToCart": "/",
+		"removeCartItem": "/carts/",
+		"setCartCustomerInformation": "/",
+		"placeOrderService": "/carts/",
+		"authorizePaymentCart": "/carts/",
+		"addPayment": "/carts/",
+		"removePayment": "/carts/",
+		"setSignature": "/carts/",
+		"printReceipt": "/receipts",
+		"tenderStationPrint": "/tenderstation/printreceipt",
+		"getDepartmentsAndPrintersList": "/fetchDepartmentAndPrinterList",
+		"MapAssociateTOPrinter": "/MapAssociateTOPrinter",
+		"bincheck": "/payment/cards/bincheck",
+		"checkInventory": "/inventory/check",
+		"cardPromotion": "/carts/",
+		"productDetails": "/products/details/",
+		"viewCart": "/carts/",
+		"availableProductOptions": "/",
+		"addProductOption": "/",
+		"removeProductOption": "/",
+		"applyGiftReceiptOption": "/carts/",
+		"addFulfillmentAddress": "/carts/",
+		"addFulfillmentCalendar": "/carts/",
+		"getDeliveryPricesDetails": "/delivery/prices",
+		"zipCodeLookup": "/location/zipcode/",
+		"storeDetails": "/store/storedetails/",
+		"retrieveInstallationOptions": "/installation/options",
+		"shippingRestrictions": "/shipping/restrictions",
+		"shippingDetails": "/carts/",
+		"creditLookup": "/customer/accountlookup",
+		"updatePromotion": "/carts/",
+		"managerIdValidation": "/managerIdValidation",
+		"associateIdValidation": "/associateIdValidation",
+		"cartItemPriceOverride": "/carts/",
+		"customerIdValidation": "/customer/idvalidation/",
+		"spendAndGet": "/carts/",
+		"ecoupons": "/ecouponsapi/r/v1/ecoupons",
+		"ecouponsCount": "/ecouponsapi/r/v1/ecoupons/saved-offers-count",
+		"fetchCompetitors": "/fetchCompetitor",
+		"adjustPrice": "/adjustprice",
+		"balanceEnquiry": "/payment/balanceEnquiry",
+		"getSima": "/installation/sima",
+		"rapidcredit": "/rapidcredit",
+		"transfercart": "/carts/associatecarts",
+		"getCustomerInformation": "/carts/",
+		"printService": "/printservice/DEJInterfaces/v1/print/creditApp/",
+		"pingService": "admin/v1/ping",
+		"authenticate": "/",
+		"registerDevice": "/register/stores/",
+		"memberAssist": "/memberassist/auth/appLogin",
+		"casWebTickets": "/castoken/tickets",
+		"sywrMaxEnroll": "/sywrMaxEnroll",
+		"memberCreate": "/sywr/creatememberint",
+		"memberUpdate": "/sywr/updatememberprimaryprofileint",
+		"memberLookUp": "/sywr/lookupint",
+		"memberOnlineLookupV3": "/CISUserLookUpV3",
+		"memberOnlineLookupV2": "/CISUserLookUpV2",
+		"memberPoints": "/sywr/balanceint",
+		"memberUpdateCart": "/carts/<cartId>/customer",
+		"memberCheckPin": "/sywr/validatepinint",
+		"memberChangePin": "/sywr/updatememberpin",
+		"memberPinUpdate": "/sywr/updatememberpinint",
+		"recap": "/recap/Managementlead/LeadManagementAPI.svc",
+		"memberKymQuestion": "/sywr/memberprompts",
+		"memberKymAnswer": "/sywr/memberpromptsupdate",
+		"validateMemberPhone": "/roxy/telluride/ws/ProfileAPI/profile/phone/validate",
+		"validateMemberAddress": "/roxy/telluride/ws/ProfileAPI/profile/address/validate",
+		"validateMemberEmail": "/roxy/telluride/ws/ProfileAPI/profile/email/validate",
+		"sendEmailVerification": "/roxy/telluride/ws/ProfileAPI/profile/email/SendEmailVerification",
+		"sendSMSVerification": "/roxy/telluride/ws/ProfileAPI/profile/mobile/SendMobileVerification",
+		"member": "/roxy/telluride/rest/tellurideAS/Profile",
+		"getProductDetails": "/products/details/",
+		"getProductReviews": "/products/reviews",
+		"getProductRelatedItems": "/productdetails/<partNum>/recommendations",
+		"getUpgardeDetails": "/products/<partNum>/upsell",
+		"getCompetitorDetails": "/products/<partNum>/competitorcompare",
+		"getStoreDetails": "/store/storedetails",
+		"getProductOptions": "/products/<partNum>/options",
+		"getOnlinePrice": "/onlinePrice",
+		"reservedevice": "/tenderstation/reservedevice",
+		"devicestatus": "/tenderstation/devicestatus",
+		"keepalive": "/tenderstation/keepalive",
+		"releasedevice": "/tenderstation/releasedevice",
+		"opencashdrawer": "/tenderstation/opencashdrawer",
+		"cashdrawerstatus": "/tenderstation/cashdrawerstatus",
+		"printreceipt": "/tenderstation/printreceipt",
+		"enablecardswipe": "/tenderstation/enablecardswipe",
+		"requestpin": "/tenderstation/requestpin",
+		"verifyamount": "/tenderstation/verifyamount",
+		"cancelcttrequest": "/tenderstation/cancelcttrequest",
+		"cttstatus": "/tenderstation/cttstatus",
+		"eventchannel": "/callback/messageprocessing/eventchannel",
+		"processemv": "/tenderstation/processemv",
+		"updateemv": "/tenderstation/updateemv",
+		"cancelemv": "/tenderstation/cancelemv",
+		"getcarddataemv": "/tenderstation/getcarddataemv",
+		"retrypin": "/tenderstation/retrypin",
+		"getProductDeals": "/product/productdeals",
+		"getUpgradeDetails": "/products/<partNum>/upsell",
+		"getapplicableoffers": "/sywr/getapplicableoffersint",
+		"getPartnumber": "/product/",
+		"get991Items": "/items/",
+		"trackSled": "/register/track/sleds/",
+		"getFinders": "/finders",
+		"getRootFinders": "/finders/",
+		"getVariantDetails": "/products/variant/details",
+		"pebblePost": "/pebble/api/Message/PostMessage",
+		"pebbleToken": "/pebble/api/Authenticate/CAS",
+		"addZebraPrinter": "/addZebraPrinter",
+		"editZebraPrinter": "/editZebraPrinter",
+		"deleteZebraPrinter": "/deleteZebraPrinter",
+		"validatemobilenumber": "/sywr/validatemobilenumber",
+		"getMemberCart": "/getMemberCart"
+	},
+	"routes": {
+		"search": "search/",
+		"keyword": "search/keyword/",
+		"results": "search/results/",
+		"details": "details/",
+		"browse": "browse/",
+		"browsehierachy": "/browse/hierarchy/",
+		"searchcategory": "search/category/results/",
+		"ordersummary": "ordersummary/",
+		"cartmanager": "cart/manager/",
+		"paymentsignature": "payment/signature/",
+		"paymentsignatureemv": "payment/signature/emv/",
+		"paymentreceipt": "payment/receipt/",
+		"paymentcard": "payment/card/",
+		"paymentmethod": "payment/method/",
+		"paymentmethodemv": "payment/method/emv",
+		"sywredeempage": "payment/syw",
+		"sywredeempagethankyou": "payment/syw/thankyou",
+		"cashdrawer": "payment/cashdrawer",
+		"login": "login/",
+		"addrecap": "recap/fullRecap",
+		"createrecap": "recap/createRecap",
+		"viewrecap": "recap/viewRecap",
+		"editrecap": "recap/editRecap/",
+		"recapsales": "recap/recapSales",
+		"pair": "pair",
+		"payment": "payment/",
+		"kym": "kym/",
+		"kymLeads": "kym-leads-ss/",
+		"logs": "debug/",
+		"protectionValue": "invoke:webLinks?webLink=http://home-services.intra.sears.com/protection_agreements/Home%20of%20Sales/Training%20Tools/SF_Training.html",
+		"termsCondition": "invoke:webLinks?webLink=http://home-services.intra.sears.com/protection_agreements/Home%20of%20Sales/Training%20Tools/Training%20Material/Highlighted%20MPA%20Terms%20%26%20Conditions.pdf",
+		"compare": "compare/",
+		"printer": "printer/",
+		"addeditprinter": "addeditprinter/",
+		"manageprinter": "manageprinter/",
+		"userGuide": "invoke:webLinks?webLink=http://learningportal.intra.searshc.com/training/retail/sears/shopsears/index.shtml",
+		"speedTest": "invoke:speedTest",
+		"weblinks": "weblinks/",
+		"featuretoggle": "featuretoggle/",
+		"rapidcredit": "rapidcredit/",
+		"kmart": "kmart"
+	},
+	"hostnames": {
+		"ss25": "https://mcp-salvip.qa.ch3.s.com/mobileapi/v1",
+		"search": "https://mcp-salvip.qa.ch3.s.com/mobileapi/v2",
+		"browse": "https://mobile1vip.qa.ch3.s.com/mobileapi5/v2",
+		"host3": "http://127.0.0.1:8080/service",
+		"store": "https://mcp-sal2vip.qa.ch3.s.com/mobileapi/v1",
+		"productreview": "https://mobile1vip.qa.ch3.s.com/mobileapi6/v1",
+		"relatedItems": "https://mcpapp302p.qa.ch3.s.com:8843/mobileapi/v1",
+		"host1": "https://mcp6-sal3vip.qa.ch3.s.com",
+		"host2": "https://mobile1vip.qa.ch3.s.com",
+		"test1": "http://localhost",
+		"test2": "https://localhost"
+	},
+	"departments": [
+		{
+			"displayName": "Appliances",
+			"verticalName": "Appliances",
+			"seoVerticalName": "appliances"
+		},
+		{
+			"displayName": "Lawn & Garden",
+			"verticalName": "Lawn & Garden",
+			"seoVerticalName": "lawn-garden"
+		},
+		{
+			"displayName": "Outdoor Living",
+			"verticalName": "Outdoor Living",
+			"seoVerticalName": "outdoor-living"
+		},
+		{
+			"displayName": "TVs & Electronics",
+			"verticalName": "TVs & Electronics",
+			"seoVerticalName": "tvs-electronics"
+		},
+		{
+			"displayName": "Jewelry & Watches",
+			"verticalName": "Jewelry",
+			"seoVerticalName": "jewelry"
+		},
+		{
+			"displayName": "Tools",
+			"verticalName": "Tools",
+			"seoVerticalName": "tools"
+		},
+		{
+			"displayName": "Home",
+			"verticalName": "Home",
+			"seoVerticalName": "home"
+		},
+		{
+			"displayName": "Fitness & Sports",
+			"verticalName": "Fitness & Sports",
+			"seoVerticalName": "fitness-sports"
+		}
+	],
+	"restrictedItems": [
+		"028",
+		"090",
+		"095",
+		"070"
+	],
+	"removeFilterArray": [
+		"international_shipping",
+		"sears_international",
+		"layAway",
+		"shipVantage"
+	],
+	"cart": {
+		"fulfillmentMethod": "TAKEWITH",
+		"fulfillmentLocation": {
+			"FLOOR": "FLOOR",
+			"BACK": "BACK",
+			"OTHER": "OTHER"
+		}
+	},
+	"addRpa": {
+		"parentDivision": [
+			"022",
+			"026",
+			"046"
+		],
+		"parentLine": [
+			"41",
+			"02",
+			"15",
+			"20",
+			"22",
+			"03",
+			"01",
+			"04",
+			"05",
+			"51"
+		],
+		"childDivision": [
+			"022",
+			"026",
+			"046"
+		],
+		"childLine": [
+			"03",
+			"58",
+			"35"
+		]
+	},
+	"uncrateSetDivision": {
+		"div": [
+			"026",
+			"022",
+			"046"
+		]
+	},
+	"applicationType": "Credit Application",
+	"posApplication": {
+		"true": "SHOPsearsTablet",
+		"false": "SHOPsearsHandHeld"
+	},
+	"cardType": {
+		"Sears Card": "SEARSCARD",
+		"SEARSCARD": "Sears Card",
+		"Sears MasterCard": "SEARSMASTERCARD",
+		"SEARSMASTERCARD": "Sears MasterCard"
+	},
+	"idIssuanceLocation": {
+		"GC": "GC",
+		"MI": "MY",
+		"PP": "PT"
+	},
+	"cdString": "CD",
+	"systemCode": 1,
+	"inputDevice": "50",
+	"unitNumZeros": "00",
+	"posPlatform": "SHOPx",
+	"dateFliterName": "date",
+	"dateFormat": "yyyy-MM-dd",
+	"casDateFormat": "yyyy-MM-dd HH:mm:ss.sss",
+	"cttPresent": "N",
+	"rcformat": "S",
+	"rcRegType": "S",
+	"rcIdType": "SC",
+	"maxMonthyPayment": 5000,
+	"minfinancialIncome": 999999,
+	"invalidCdCount": 3,
+	"cdCountIncrement": 1,
+	"languageType": [
+		{
+			"name": "English",
+			"code": "0"
+		},
+		{
+			"name": "Spanish",
+			"code": "1"
+		}
+	],
+	"residenceType": {
+		"0": "O",
+		"1": "R",
+		"2": "X"
+	},
+	"creditCardType": [
+		{
+			"name": "Sears MasterCard",
+			"code": "0"
+		},
+		{
+			"name": "Sears Card",
+			"code": "1"
+		}
+	],
+	"viewBox": {
+		"tablet": {
+			"vwidth": "556",
+			"vheight": "130"
+		},
+		"handheld": {
+			"vwidth": "290",
+			"vheight": "100"
+		},
+		"strokeWidth": "2",
+		"stroke": "black"
+	},
+	"hardcoded": {
+		"registerNo": "903",
+		"countryCode": "US",
+		"gcStockNumber": "76023",
+		"upStoreId": "10153",
+		"regionId": "602",
+		"zipcode": "60601",
+		"store": "sears",
+		"partNum": "00343861000P",
+		"addToCartProductQUantity": "1",
+		"fulfillmentMethod": "TAKEWITH",
+		"addToCartMessageOk": "Item Successfully Added to your Cart",
+		"addToCartMessageFail": "Unable to Added to your Cart",
+		"storeId": "10153",
+		"storeName": "Sears",
+		"storeLocationId": "0001200",
+		"enableCrashLogger": true,
+		"onlineProductSource": "online",
+		"deliveryArrivalMethod": "Delivery",
+		"catalogId": "12605_Sears",
+		"PROTECTION_AGREEMENT": "PA",
+		"competitorCount": 3,
+		"PA_COUPON_CODE": "00070000",
+		"disabledFlyBy": true,
+		"disabledFlyBack": false,
+		"ipaVersion": 1.5,
+		"states": {
+			"state": [
+				{
+					"Name": "US Armed Forces Europe",
+					"Code": "AE"
+				},
+				{
+					"Name": "Alaska",
+					"Code": "AK"
+				},
+				{
+					"Name": "Alabama",
+					"Code": "AL"
+				},
+				{
+					"Name": "US Armed Forces Pacific",
+					"Code": "AP"
+				},
+				{
+					"Name": "Arkansas",
+					"Code": "AR"
+				},
+				{
+					"Name": "American Samoa",
+					"Code": "AS"
+				},
+				{
+					"Name": "Arizona",
+					"Code": "AZ"
+				},
+				{
+					"Name": "California",
+					"Code": "CA"
+				},
+				{
+					"Name": "Colorado",
+					"Code": "CO"
+				},
+				{
+					"Name": "Connecticut",
+					"Code": "CT"
+				},
+				{
+					"Name": "District of Columbia",
+					"Code": "DC"
+				},
+				{
+					"Name": "Delaware",
+					"Code": "DE"
+				},
+				{
+					"Name": "Florida",
+					"Code": "FL"
+				},
+				{
+					"Name": "Georgia",
+					"Code": "GA"
+				},
+				{
+					"Name": "Guam",
+					"Code": "GU"
+				},
+				{
+					"Name": "Hawaii",
+					"Code": "HI"
+				},
+				{
+					"Name": "Iowa",
+					"Code": "IA"
+				},
+				{
+					"Name": "Idaho",
+					"Code": "ID"
+				},
+				{
+					"Name": "Illinois",
+					"Code": "IL"
+				},
+				{
+					"Name": "Indiana",
+					"Code": "IN"
+				},
+				{
+					"Name": "Kansas",
+					"Code": "KS"
+				},
+				{
+					"Name": "Kentucky",
+					"Code": "KY"
+				},
+				{
+					"Name": "Louisiana",
+					"Code": "LA"
+				},
+				{
+					"Name": "Massachusetts",
+					"Code": "MA"
+				},
+				{
+					"Name": "Maryland",
+					"Code": "MD"
+				},
+				{
+					"Name": "Maine",
+					"Code": "ME"
+				},
+				{
+					"Name": "Michigan",
+					"Code": "MI"
+				},
+				{
+					"Name": "Minnesota",
+					"Code": "MN"
+				},
+				{
+					"Name": "Missouri",
+					"Code": "MO"
+				},
+				{
+					"Name": "Northern Mariana Islands",
+					"Code": "MP"
+				},
+				{
+					"Name": "Mississippi",
+					"Code": "MS"
+				},
+				{
+					"Name": "Montana",
+					"Code": "MT"
+				},
+				{
+					"Name": "North Carolina",
+					"Code": "NC"
+				},
+				{
+					"Name": "North Dakota",
+					"Code": "ND"
+				},
+				{
+					"Name": "Nebraska",
+					"Code": "NE"
+				},
+				{
+					"Name": "New Hampshire",
+					"Code": "NH"
+				},
+				{
+					"Name": "New Jersey",
+					"Code": "NJ"
+				},
+				{
+					"Name": "New Mexico",
+					"Code": "NM"
+				},
+				{
+					"Name": "Nevada",
+					"Code": "NV"
+				},
+				{
+					"Name": "New York",
+					"Code": "NY"
+				},
+				{
+					"Name": "Ohio",
+					"Code": "OH"
+				},
+				{
+					"Name": "Oklahoma",
+					"Code": "OK"
+				},
+				{
+					"Name": "Oregon",
+					"Code": "OR"
+				},
+				{
+					"Name": "Pennsylvania",
+					"Code": "PA"
+				},
+				{
+					"Name": "Puerto Rico",
+					"Code": "PR"
+				},
+				{
+					"Name": "Rhode Island",
+					"Code": "RI"
+				},
+				{
+					"Name": "South Carolina",
+					"Code": "SC"
+				},
+				{
+					"Name": "South Dakota",
+					"Code": "SD"
+				},
+				{
+					"Name": "Tennessee",
+					"Code": "TN"
+				},
+				{
+					"Name": "Texas",
+					"Code": "TX"
+				},
+				{
+					"Name": "Utah",
+					"Code": "UT"
+				},
+				{
+					"Name": "Virginia",
+					"Code": "VA"
+				},
+				{
+					"Name": "Virgin Islands",
+					"Code": "VI"
+				},
+				{
+					"Name": "Vermont",
+					"Code": "VT"
+				},
+				{
+					"Name": "Washington",
+					"Code": "WA"
+				},
+				{
+					"Name": "Wisconsin",
+					"Code": "WI"
+				},
+				{
+					"Name": "West Virginia",
+					"Code": "WV"
+				},
+				{
+					"Name": "Wyoming",
+					"Code": "WY"
+				},
+				{
+					"Name": "ALBERTA",
+					"Code": "AB"
+				},
+				{
+					"Name": "B. Columbia",
+					"Code": "BC"
+				},
+				{
+					"Name": "Manitoba",
+					"Code": "MB"
+				},
+				{
+					"Name": "New Brunswick",
+					"Code": "NB"
+				},
+				{
+					"Name": "Nova Scotia",
+					"Code": "NS"
+				},
+				{
+					"Name": "Northwest Terr.",
+					"Code": "NT"
+				},
+				{
+					"Name": "Ontario",
+					"Code": "ON"
+				},
+				{
+					"Name": "Prince Edward I.",
+					"Code": "PE"
+				},
+				{
+					"Name": "Quebec",
+					"Code": "QU"
+				},
+				{
+					"Name": "Saskatchewan",
+					"Code": "SK"
+				},
+				{
+					"Name": "Yukon Territory",
+					"Code": "YT"
+				},
+				{
+					"Name": "Military ID",
+					"Code": "MY"
+				},
+				{
+					"Name": "Passport Office",
+					"Code": "PT"
+				}
+			]
+		},
+		"excludeState": [
+			"AE",
+			"AP",
+			"MP"
+		],
+		"usIdTypes": {
+			"commonUsIdType": [
+				{
+					"idType": "DL",
+					"idName": "DRIVER'S LICENSE"
+				},
+				{
+					"idType": "ST",
+					"idName": "STATE ID"
+				}
+			],
+			"lookupUsIdType": [
+				{
+					"idType": "PP",
+					"idName": "U.S. Passport"
+				},
+				{
+					"idType": "GC",
+					"idName": "Green Card"
+				},
+				{
+					"idType": "MI",
+					"idName": "Military ID"
+				}
+			]
+		}
+	},
+	"arrivalMethods": {
+		"takewith": "TAKEWITH",
+		"mpu": "MPU",
+		"spu": "SPU",
+		"sres": "SRES",
+		"delivery": "DELIVERY",
+		"tw": "TW",
+		"TRANSFER_SALE": "Transfer Sale",
+		"ship": "TW",
+		"ffmship": "SHIP",
+		"PICKUP": "Pickup",
+		"mdo": "MDO",
+		"flyby": "FBY",
+		"flyback": "FBK",
+		"TAKE_WITH": "Take With",
+		"MERCHANDISE_PICKUP": "Merchandise Pickup",
+		"MDO": "Cust. Pickup @ MDO",
+		"DELIVERY": "Delivery",
+		"SHIP": "Ship",
+		"FBY": "Flyby Delivery",
+		"FBK": "Flyback Delivery"
+	},
+	"arrivalMethodsDescriptions": {
+		"takewith": "Take With",
+		"mpu": "Merchandise Pickup",
+		"spu": "Pickup",
+		"sres": "SRES",
+		"delivery": "Delivery",
+		"tw": "TW",
+		"mdo": "MDO",
+		"ship": "Ship",
+		"flyby": "FBY",
+		"flyback": "FBK",
+		"fby": "FBY",
+		"fbk": "FBK"
+	},
+	"zebraprinterActiveStores": {
+		"1069": "1069",
+		"1103": "1103",
+		"1125": "1125",
+		"1187": "1187",
+		"1213": "1213",
+		"1278": "1278",
+		"1300": "1300",
+		"1478": "1478",
+		"1733": "1733",
+		"1814": "1814"
+	},
+	"Coupons": {
+		"errorMessages": {
+			"100-008": "Coupon cannot be applied to items in the cart.",
+			"100-002": "Coupon not valid.",
+			"100-400": "Coupon not valid.",
+			"100-003": "Coupons not applicable to cart items.",
+			"100-05": "Cart does not qualify for this operation as no item exists in the cart for adjustments.",
+			"100-006": "This coupon has expired.",
+			"100-403": "This coupon has expired.",
+			"100-404": "This coupon has expired.",
+			"100-007": "This coupon is not valid yet. Please check the coupon for redemption info..",
+			"100-401": "This coupon is not valid yet. Please check the coupon for redemption info..",
+			"100-402": "This coupon is not valid yet. Please check the coupon for redemption info..",
+			"100-009": "Items in the cart do not meet the requirements for this coupon.",
+			"100-305": "Delivery Offer Coupon-Invalid based on Dates.",
+			"100-306": "Delivery Offer Coupon-Invalid based on store type.",
+			"100-307": "Delivery Offer Coupon-Not valid based on qualifiers.",
+			"100-308": "Delivery Offer Coupon-Not valid due to threshold.",
+			"100-020": "C2C Offer is not applicable to the cart.",
+			"100-801": "Cut to close offers not valid with friends and family coupons.",
+			"100-802": "Cut to close Offers not valid with sears card discount coupons.",
+			"100-803": "Cut to close offer subject to SYWR membership availability.",
+			"120-501": "Supplied Coupon needs payment with sears family of cards.",
+			"100-405": "SYWR number is not valid.",
+			"100-406": "This coupon has been used the maximum number of times.",
+			"100-407": "Coupon could not be applied.",
+			"100-408": "Shop Your Way� Membership Required. This coupon can be applied only if the customer is a Shop Your Way member.",
+			"100-409": "Sears card is not allowed and is associate user",
+			"100-410": "Coupon cannot be redeemed online",
+			"100-411": "The coupon cannot be applied.",
+			"100-029": "This coupon cannot be used with applied coupons and discounts.",
+			"100-012": "This coupon cannot be used with applied coupons and discounts.",
+			"100-013": "This coupon cannot be used with applied coupons and discounts.",
+			"defaultError": "Coupon not valid."
+		}
+	},
+	"cartPromotionCodes": {
+		"freeShipping": "4.1",
+		"freeDelivery": "2",
+		"associateDiscount": "0",
+		"craftsmanClub$off": "6.6"
+	},
+	"creditReferral": {
+		"notReferralCode": [
+			"0123",
+			"01234",
+			"012345",
+			"1234",
+			"12345",
+			"123456",
+			"2345",
+			"23456",
+			"234567",
+			"3456",
+			"34567",
+			"345678",
+			"4567",
+			"45678",
+			"456789",
+			"5678",
+			"56789",
+			"6789",
+			"67890",
+			"678901",
+			"7890",
+			"78901",
+			"78902",
+			"8901",
+			"89012",
+			"890123",
+			"9012",
+			"90123",
+			"901234",
+			"9876",
+			"98765",
+			"987654",
+			"8765",
+			"87654",
+			"876543",
+			"7654",
+			"76543",
+			"765432",
+			"6543",
+			"65432",
+			"654321",
+			"5432",
+			"54321",
+			"543210",
+			"4321",
+			"43210",
+			"432109",
+			"3210",
+			"32109",
+			"321098",
+			"2109",
+			"21098",
+			"210987",
+			"1098",
+			"10987",
+			"109876",
+			"0987",
+			"09876",
+			"098765",
+			"1111",
+			"11111",
+			"111111",
+			"2222",
+			"22222",
+			"222222",
+			"3333",
+			"33333",
+			"333333",
+			"4444",
+			"44444",
+			"444444",
+			"5555",
+			"55555",
+			"555555",
+			"6666",
+			"66666",
+			"666666",
+			"7777",
+			"77777",
+			"777777",
+			"8888",
+			"88888",
+			"888888",
+			"9999",
+			"99999",
+			"999999",
+			"0000",
+			"00000",
+			"000000"
+		]
+	},
+	"messages": {
+		"cart.validation.no.items": "No items in cart",
+		"cart.validation.item.incomplete.date.address": "Item {0} Estimated Product Availability Date may have changed, return to the Options & Requirements Page to verify.",
+		"cart.validation.item.customer.info.empty": "Item {0} customer information empty.",
+		"cart.validation.item.delivery.date.time.not.selected": "Item {0} Delivery Date and Time are not Selected.",
+		"cart.validation.item.gh.mandatory.ra": "Required Accessory is mandatory for Item {0} with Gas Hook Up Intallation.",
+		"cart.validation.item.ffm.mandatory": "Fulfillment mode is mandatory for Item {0}",
+		"cart.validation.item.incomplete.wf.customer.info": "Please complete water filter customer information for {0}",
+		"cart.validation.item.incomplete.mdo": "Please select and store for {0}",
+		"cart.validation.incomplete.customer.info": "Please complete customer information",
+		"cart.add.problem.with.merchandise": "There is a problem with this merchandise. Do not sell. Please send to the RTV room for disposition.",
+		"cart.add.item.unable.add.to.cart": "Unable to add to cart {0}",
+		"cart.add.product.added": "Product added to cart",
+		"cart.add.unable.add.to.cart": "Unable to add to cart",
+		"cart.add.part.number.not.found": "The part number provided cannot be found",
+		"part.not.found": "The part number provided cannot be found",
+		"cart.add.legal.restriction": "Legal Restriction",
+		"cart.group.presenter.items.for.pickup": "Items for pickup",
+		"cart.group.presenter.items.for.take.with": "Items to take with",
+		"cart.group.presenter.items.for.pickup.diferent.store": "Items to be pickup at a different store",
+		"cart.group.presenter.items.for.pickup.mdo": "Items to be pickup at MDO",
+		"cart.group.presenter.items.for.delivery.installed": "Items to be delivered and installed",
+		"cart.group.presenter.items.for.delivery.installer": "Items to be delivered by installer",
+		"cart.group.presenter.items.for.delivery.hookup": "Items to be Delivered and/or Hooked up",
+		"cart.group.presenter.items.for.shipping": "Items to be Shipped",
+		"cart.group.presenter.installation.date": "Installation Date",
+		"cart.group.presenter.delivery.date.time": "Delivery Date & time",
+		"cart.group.presenter.delivery.address": "Delivery address:",
+		"cart.group.presenter.shipping.address": "Shipping address:",
+		"cart.flyback.snc.option.change.address.verify": "Fulfillment option has changed. Please verify Customer information in the Delivery tab.",
+		"quick.scan.item.added": "Product added",
+		"quick.scan.item.adding.error": "Error adding the product",
+		"quick.scan.item.not.found": "No Item Found",
+		"quick.scan.item.not.found.scan": "Item scanned cannot be found",
+		"quick.scan.item.not.found.part.number": "Part number provided cannot be found",
+		"cart.manual.add.item.out.of.stock.in.store": "Item is out of stock in this store",
+		"customer.information.required.fields.missing": "Required fields are missing.",
+		"customer.information.invalid.zipcode.city.state.country": "Invalid Zip Code, City, State or County",
+		"payment.service.failed.retrieve.sears.promotions": "Failed to retrieve Sears cards promotions",
+		"payment.service.dollar.authorization.failed": "Dollar Authorization Failed",
+		"payment.service.wrong.card.type": "You entered information for a wrong card type.",
+		"payment.service.unexpected.response.structure": "Unexpected response structure when adding payment to order",
+		"payment.service.full.dollar.authorization.failed": "Full Dollar Authorization Failed",
+		"receipt.service.no.printers.available": "No printers available",
+		"load.product.options.service.one.left.in.stock": "Only 1 Left In Stock",
+		"load.product.options.service.in.stock.today": "{0} In Stock TODAY",
+		"load.product.options.service.available.in.days": "Available in {0} days",
+		"load.product.options.service.out.of.stock": "Out of Stock",
+		"product.options.no.stores.for.zipcode": "No stores found within 50 miles to fill this request. Please change ZIP code to locate a store",
+		"product.options.update.customer.address.on.zipcode.change": "The zip code has changed. Please confirm customer information to update delivery charges.",
+		"product.options.get.store.list.error": "Unable to get store list.",
+		"product.options.transfer.sale.not.enought.stock": "Can't change to Transfer Sale fulfillment method. Item is out of stock in the available stores",
+		"cart.mannual.add.991item.single.info": "<b>991 Item</b><br>The +4 for the item being added is {0}.",
+		"cart.mannual.add.991item.multiple.warning": "<b>Warning</b><br>This item requires a +4 to display a price. To select the item the customer is interested in purchasing, tap the Select Item button below.",
+		"cart.mannual.add.991item.multiple.info": "<b>991 Item</b><br>The +4 selected is {0}. To change the +4, tap the button below.",
+		"network.error": "Network error. Could not connect to API",
+		"cart.mannual.add.giftcard.no.sled.info": "<b>No Sled Attached</b><br/>Without the presence of an active working sled, you will not be able to add a gift card to the transaction. Either locate a sled or process the transaction at the register.",
+		"cart.mannual.add.giftcard.info": "Giftcard added to cart",
+		"cart.mannual.add.giftcard.amount.error": "Be sure the amount added to the card is between $5-$500.",
+		"cart.mannual.add.thirdparty.giftcard.error": "Gift card scanned is not supported in SHOPsears. Please finalize transaction at POS.",
+		"cart.mannual.add.item.pickup.shippingrestricted": "Pickup Restricted for item in this location.",
+		"cart.mannual.add.item.amount.error": "Price not found for this item. Please finalize transaction at POS for this product.",
+		"rapid.card.prefill.bad.request.error": "The information you have entered is invalid, please try again.",
+		"cart.ffm.change.item.out.of.stock.error": "This item is currently out of stock.",
+		"cart.ffm.change.message": "The fulfillment method has been changed.",
+		"payment.bin.notfound": "Invalid card, no data or results found.",
+		"delivery.window.change.message": "The delivery window has been changed. Final delivery charge will be reflected on the cart page.",
+		"delivery.date.change.message": "The delivery date has been changed. Please check and confirm.",
+		"payment.amountdue.invalidamountdue": "The amount applied exceeds the amount due. Change the amount or select Cash payment option.",
+		"syw.member.change.message": "Shop Your Way member has changed, please verify customer information.",
+		"cart.item.invalidshipmode": "Item can't associate with the {shipmode} ship mode. Please select a different ship mode.",
+		"cart.associate.active.promo.error": "Associate is already enrolled in Associate Points Benefits program and will be receiving Associate Discount in points.",
+		"cart.associate.invalid.promo.error": "This is not a valid associate ID number or the associate has not activated their Associate Points benefits and no longer qualifies for Associate Discount benefits. Inform the associate to go to 88sears to active their benefits.",
+		"sywr.update.phone.error": "Sorry, something went wrong  while updating phone number. Please try again later!",
+		"sywr.update.sms.error": "Sorry, something went wrong while sending SMS. Please try again later!",
+		"sywr.validate.phone.error": "Sorry, something went wrong while validating phone number. Please try again later!",
+		"sywr.validate.email.error": "Sorry, something went wrong while validating email. Please try again later!",
+		"sywr.update.email.error": "Sorry, something went wrong  while updating email. Please try again later!",
+		"sywr.send.email.error": "Sorry, something went wrong while sending email. Please try again later!"
+	},
+	"urlConfig": {
+		"hosts": {
+			"sal1": "https://mcp-salvip.qa.ch3.s.com/mobileapi",
+			"sal2": "https://mcp-sal2vip.qa.ch3.s.com/mobileapi",
+			"sal3": "https://mcp3-salvip.qa.ch3.s.com/mobileapi",
+			"sal4": "https://mcp4-sal2vip.qa.ch3.s.com/mobileapi",
+			"sal5": "https://mcp5-sal3vip.qa.ch3.s.com/mobileapi",
+			"sal6": "https://mcp6-sal3vip.qa.ch3.s.com/mobileapi",
+			"salStag": "https://mobilesalvip.stag.ch4.s.com/mobileapi",
+			"salPilot": "https://mobilesalint-pilotvip.prod.ch4.s.com/mobileapi",
+			"salProd": "https://mobilesalint.prod.global.s.com/mobileapi",
+			"autoFillQa": "https://sears-autofill.prod.global.s.com/autofill",
+			"e2e": "http://localhost:7878",
+			"autoFillProd": "https://sears-autofill.prod.global.s.com/autofill",
+			"salIss": "",
+			"sslogQA": "https://shopsears25vip.qa.ch3.s.com/log",
+			"sslogPilot": "https://shopsears25-pilotvip.prod.ch4.s.com/log",
+			"sslogProd": "https://shopsears25.prod.global.s.com/log",
+			"sslogIss": "https://shopsears25.prod.global.s.com/log",
+			"sal7": "https://mcp-sal3vip.qa.ch3.s.com/mobileapi",
+			"sal8": "https://mcp-sal4vip.qa.ch3.s.com/mobileapi",
+			"lms": "https://leadsapidev.searshc.com/v1",
+			"lmsLeads": "https://leadsapiqa.searshc.com/v1",
+			"lmsPhase1": "https://appstest.searshc.com",
+			"lmsLeadsPhase1": "https://apps.searshc.com",
+			"telluride": "http://esbqa-med.intra.searshc.com",
+			"lmsProd": "https://leadsapi.searshc.com/v1",
+			"lmsStress": "https://leadsapistress.searshc.com/v1",
+			"e2eMockeyServer": "http://localhost:5050/mobileapi",
+			"e2eRecorderServer": "http://localhost:5050/mobileapi"
+		},
+		"versions": {
+			"sal3v1": "/v1",
+			"sal6v1": "/v1",
+			"sal5v1": "/v1",
+			"salPilot": "/v1",
+			"ss25": "/v1",
+			"productdetails": "/v2",
+			"search": "/v2",
+			"browse": "/v2",
+			"salIssPing": "/",
+			"ship": "/v2",
+			"autoFill": {
+				"hostOverride": {
+					"sal3": "autoFillQa",
+					"sal6": "autoFillQa",
+					"salProd": "autoFillProd",
+					"salPilot": "autoFillProd",
+					"salIssPing": "salIss",
+					"sal1": "autoFillQa",
+					"sal2": "autoFillQa",
+					"sal4": "autoFillQa",
+					"sal5": "autoFillQa",
+					"sal7": "autoFillQa",
+					"sal8": "autoFillQa"
+				}
+			},
+			"sslog": {
+				"hostOverride": {
+					"sal3": "sslogQA",
+					"sal6": "sslogQA",
+					"sal1": "sslogQA",
+					"sal2": "sslogQA",
+					"sal4": "sslogQA",
+					"sal5": "sslogQA",
+					"sal7": "sslogQA",
+					"salProd": "sslogProd",
+					"salPilot": "sslogPilot",
+					"salIssPing": "sslogIss"
+				}
+			},
+			"sstest": "/v1",
+			"greenbox": "/v3",
+			"gateway.base.url": "/v1",
+			"partNumberSearch": "/v1",
+			"searsGateway": "/v1/ssgateway",
+			"calendarFFM": "/v2",
+			"crossDomain": "/v1",
+			"sal7v1": "/v1",
+			"sal8v1": "/v1",
+			"mobileNumber": "/v1",
+			"recommendations": "/v3",
+			"member": "/v2",
+			"placeOrder": "/v2",
+			"storeDetails": "/v2",
+			"inventoryCheck": "/v2",
+			"onlinePrice": "/v2",
+			"customerInformationV2": "/v2"
+		},
+		"active": "salProd"
+	},
+	"logging": {
+		"appender": "server",
+		"ejournal": "/log/ejournal",
+		"functional": "/log/functional",
+		"funcDelay": "10000",
+		"serverData": "/log/getLogLevel",
+		"perfLog": "/perflog",
+		"apiLog": "/apilog",
+		"apiLogArraySize": 5,
+		"apiLogTimeout": "2000",
+		"ejournalLogTimeout": "5000"
+	},
+	"flags": {
+		"PRODUCT_OPTIONS_ENABLED_FOR_B2_ALL": "false",
+		"PRODUCT_OPTIONS_ENABLED_FOR_B3_ALL": "false",
+		"KNOW_YOUR_MEMBER_ENABLED_FOR_ALL_STORES": true,
+		"DEVICE_REGISTRY_FLAG": false,
+		"ENABLE_RELATED_ITEMS_FLAG": {
+			"sal1": true,
+			"sal2": true,
+			"sal3": true,
+			"sal4": true,
+			"sal5": true,
+			"sal6": false,
+			"salStag": false,
+			"salPilot": false,
+			"salProd": false,
+			"salIss": true,
+			"sal7": true,
+			"sal8": true
+		},
+		"adminTools": {
+			"ADMIN_TOOLS_ENABLE_FLAG": {
+				"sal1": "true",
+				"sal2": "true",
+				"sal3": "true",
+				"sal4": "true",
+				"sal5": "true",
+				"sal6": "true",
+				"salStag": "true",
+				"salPilot": "true",
+				"salProd": "true",
+				"salIss": "true",
+				"sal8": "true"
+			},
+			"ADMIN_TOOLS_ACTIVE_STORES": {
+				"sal1": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal2": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal3": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal4": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal5": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal6": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"salStag": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"salPilot": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"salProd": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"salIss": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal7": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;",
+				"sal8": "1024;1057;1062;2207;1090;1535;1584;1605;2373;2034;"
+			}
+		},
+		"NETWORK_VALIDATION_FLAG": true
+	},
+	"creditCardValidation": {
+		"thresholdAmount": 0
+	},
+	"competitors": [
+		"ABC Warehouse",
+		"ABT",
+		"Academy Sports",
+		"ACE Hardware",
+		"American appl.",
+		"Appliance Direct",
+		"Bed Bath Beyond",
+		"BELK",
+		"Best Buy",
+		"BESTBUY.COM",
+		"BIG 5",
+		"BJ WHOLESALE",
+		"BloomingDales",
+		"Bob's Stores",
+		"BON TON",
+		"Boscovs",
+		"Brand Smart",
+		"BROADWAY SHOES",
+		"Carnival Shoes",
+		"Carson's",
+		"Comp USA",
+		"CONNS",
+		"COSTCO",
+		"Dick's",
+		"Dillards",
+		"DSW",
+		"Dunham's Sports",
+		"Famous Footwear",
+		"Finish Line",
+		"Foot Locker",
+		"Fry's Electronic",
+		"Goody's",
+		"Harbor Freight T",
+		"HH Gregg",
+		"Home Depot",
+		"Homedepot.com",
+		"JC Penney",
+		"KMART",
+		"KMART.com",
+		"KOHLS",
+		"LANDS END",
+		"Landsend.com",
+		"Lord & Taylor",
+		"Lowes",
+		"LOWES.COM",
+		"Macy's",
+		"Meijer",
+		"Menards",
+		"NEBRASKA FURN.",
+		"Nordstrom",
+		"Office Depot",
+		"Office Max",
+		"Orchard Supply H ",
+		"Pacific Sales",
+		"PC Richard Sons",
+		"Radio Shack",
+		"RC Wiley",
+		"Sam's Club",
+		"Sears",
+		"Sears.com",
+		"Sears Hardware",
+		"Sears Hometown",
+		"Sports Author",
+		"Sport Chalet",
+		"Staples",
+		"Target",
+		"TigerDirect.com ",
+		"Toys R Us",
+		"Tractor Supply C",
+		"True Value",
+		"Von Maur",
+		"Wal-Mart",
+		"Younkers",
+		"Local Competitor"
+	],
+	"ejournalEventType": {
+		"login": "startSession",
+		"search": "search",
+		"browse": "productBrowse ",
+		"addToCart": "addToCart",
+		"viewCart": "shoppingCart",
+		"checkOut": "checkout",
+		"sywrMemberSearch": "sywrSearch",
+		"sywrSelect": "sywrMemberSelected",
+		"shoppingCart": "shoppingCart",
+		"itemDeletion": "itemDeletion",
+		"editQuantityDetails": "shoppingCart",
+		"editQuantity": "addToCart",
+		"tsPairingReqInit": "tsPairingReqInit",
+		"tsPairingReqUnsuccessful": "tsPairingReqUnsuccessful",
+		"tsPairingReqSuccessful": "tsPairingReqSuccessful"
+	},
+	"commons": {
+		"interceptors": [
+			"CoreCommonsHmacAutorizationProvider"
+		],
+		"security": {
+			"tabletPhrase": "9c8b6c09b3f148c38476a1b442a984d8",
+			"hhPhrase": "4dbc77b6fb914b8abad282d84c2df9e6",
+			"tabletClientId": "SHOPSEARS25IPAD",
+			"hhClientId": "SHOPSEARS25IPOD"
+		},
+		"native": {
+			"sledDecodingPass": "11111111111111111111111111111111"
+		},
+		"omniture": {
+			"OMN_TAG_ENABLE": true,
+			"OMN_SPACE_CHAR": " ",
+			"OMN_PAGE_PREFIX": "",
+			"OMN_PAGE": "Page",
+			"OMN_GRT_CHAR": ">",
+			"OMN_PAGE_SUFFIX": " Page",
+			"OMN_SSL_CHANNEL": "Shop Sears 2.5",
+			"OMN_LOGIN_ERROR": "Login Page - errorPage",
+			"OMN_LOGIN": "Login",
+			"OMN_RESULTS": "Item Results",
+			"OMN_UPDATES": "Update",
+			"OMN_DEPARTMENT": "Choose Department",
+			"OMN_CART": "Shopping Cart",
+			"OMN_EMPTY_CART": "Empty Shopping Cart",
+			"OMN_BROWSE": "Browse",
+			"OMN_VERTICAL": "Vertical",
+			"OMN_CATEGORY": "Category",
+			"OMN_SUBCATEGORY": "Sub Category",
+			"OMN_SEARCH": "Search",
+			"OMN_PIPE": "|",
+			"OMN_HYPHEN": "-",
+			"OMN_LEVEL": "Level",
+			"OMN_ZERO": "zero",
+			"OMN_CLICK": " Clicked",
+			"OMN_DISPLAY": "Display",
+			"OMN_APPLY_OFFER": "Apply Offer",
+			"OMN_REMOVE_OFFER": "Remove Offer",
+			"OMN_FILTER": "Filter",
+			"OMN_PDP": "Product Details",
+			"OMN_ATC": "Add to Cart Button",
+			"OMN_DONE": "Done Button",
+			"OMN_COMPARE": "Compare Product",
+			"OMN_NARROW_SEARCH": "Narrow Your Results",
+			"OMN_OPTIONS": "Item Options",
+			"OMN_DEFAULT_FILTER": "storeOrigin",
+			"OMN_PRICE_OVERRIDE": "Price Override",
+			"OMN_APPLY": "Apply Button Clicked with reason - ",
+			"OMN_APPLY_BTN": "Apply Button",
+			"OMN_VALIDATE_BTN": "Validate Button",
+			"OMN_SELECT": " Selected",
+			"OMN_COUPON_DISCOUNT": "Coupons and Discounts",
+			"OMN_AMO": "Additional MO",
+			"OMN_MANAGE_COUPONS_DISCOUNTS": "MCD",
+			"OMN_DISPLAY_BTN": "Display Button",
+			"OMN_ADDITIONAL_MEMBER_OFFER": "AMO",
+			"OMN_ADD_IN_PDP": "Add In PDP Button",
+			"OMN_SEMI_COLON": ";",
+			"OMN_COMMA": ",",
+			"OMN_DELETE_CART": "Delete Button",
+			"OMN_CREATE_RECAP": "Create Recap",
+			"OMN_RECAP_SEND": "Send Recap with Reason - ",
+			"OMN_RECAP_SAVE": "Save with Reason - ",
+			"OMN_MY_RECAPS": "My Recaps",
+			"OMN_EDIT_RECAP": "Edit Recap",
+			"OMN_ADD_PRODUCT": "Add Product Button",
+			"OMN_TRACKING_ID_ASSOCIATE_PREFIX": "TRACKER_ASSOC",
+			"OMN_SEMI_COLON_THRICE": ";;;",
+			"OMN_PAYMENT_OPTIONS_PAGE": "Payment Options",
+			"OMN_LOGOUT": "Log Out Button",
+			"OMN_ADD_ITEM": "Add Item Button",
+			"OMN_SUBMIT": "Submit Button",
+			"OMN_ISSUE": " with issue ",
+			"OMN_REPORT_ISSUE": "Report an Issue",
+			"OMN_SEARS_CARD_SSN_PAGE": "Sears Card Account Lookup - With SSN",
+			"OMN_SEARS_CARD_LOGIN_PAGE": "Sears Card Account Lookup - Associate Login",
+			"OMN_SELECT_SEARS_CARD_PAGE": "Sears Card Account Lookup - Select Sears Card",
+			"OMN_LOOKUP_ERROR_PAGE": "Sears Card Account Lookup - Unable to Locate Account",
+			"OMN_SAVE_CONTACT_INFO_BUTTON": "Save Contact Info Button",
+			"OMN_EDIT_INFO_BUTTON": "Edit Customer Info Button",
+			"OMN_EDIT_BUTTON": "Edit Button",
+			"OMN_SAVE_BUTTON": "Save Button",
+			"OMN_RECEIPT": "Receipt",
+			"OMN_DELETE": "Delete Button",
+			"OMN_SEARS_LOOKUP_PAYMENT": "Sears Card Account Lookup - Apply Payment",
+			"OMN_EMPTY_RECAP": "Empty Recap List",
+			"OMN_RECAP_LIST": "Recap List",
+			"OMN_RECAP_EXIST": "Recap Exist Alert",
+			"OMN_LOOKUP": "Lookup Button",
+			"OMN_WITH": "with",
+			"OMN_SYWR_SIGN_UP": "SYW Sign Up",
+			"OMN_SYW_TERMS": "SYW Terms & Conditions",
+			"OMN_SYW_ENTER_PIN": "SYW Enter Pin",
+			"OMN_SYW_SIGNUP_SUCCESS": "SYW Sign Up Success",
+			"OMN_SYW_SIGNUP_ERROR": "SYW Sign Up Error",
+			"OMN_MY_SALES": "My Sales",
+			"OMN_MEMBER_LOOKUP": "SYW Member Lookup",
+			"OMN_SYWR_GUEST": "Start With A New Customer",
+			"OMN_SYW_REDEEM_BREAKDOWN": "SYW Points Redemption Breakdown",
+			"OMN_SYW_POINTS_BREAKDOWN": "SYW Points Breakdown",
+			"OMN_SYW_PIN_UPDATE": "SYW Pin Update",
+			"OMN_SYW_POINTS_EARNED": "SYW Points To Be Earned",
+			"OMN_SYW_REDEEM": "SYW Points Redemption",
+			"OMN_ADD_TO_RECAP": "Add to Recap Button",
+			"OMN_RECAP_BUTTON": "Recap Button",
+			"OMN_MANAGER_APPROVAL": "Manager Approval Coupon",
+			"OMN_SYWR_MEMBER": "Sywr Member",
+			"OMN_SYW_MEMBER_INFO": "SYW Member Information",
+			"OMN_SYW_LOOKUP_LOCATION": "SYW Lookup from - ",
+			"OMN_SYW_REGISTER_LOCATION": "SYW Registration from - ",
+			"OMN_RECEIVE_RECEIPT": "Receive Receipt",
+			"OMN_SYWR_MAXX": " with SYWR Maxx",
+			"OMN_BUTTON": " Button",
+			"OMN_JOIN_CRAFTSMAN": " Join Craftsman Button",
+			"OMN_JOIN_SYW": " Enroll in SYW Max Trial Button",
+			"OMN_ERROR": " - errorPage",
+			"OMN_ORDER_CONF": "Order Confirmation",
+			"OMN_INSTALLATION": "Installation",
+			"OMN_WATER_FILTER": "Water Filter Subscription",
+			"OMN_LAWN_GARDEN": "L& G ",
+			"OMN_STORE_ID": "Store Id: ",
+			"OMN_MDO": "Customer Pickup MDO",
+			"OMN_TRANSFER_SALE": "Transfer Sale",
+			"OMN_VOID_TXN": "Void Transaction",
+			"OMN_GIFT_BTN": "Gift Receipt Button",
+			"OMN_SYWR_CUSTOMER_LOOKUP": "SYW Customer Information Lookup",
+			"OMN_SWITCH_GUEST": "Switch to Guest",
+			"OMN_CARD": " Card",
+			"OMN_CONTINUE_SHOPPING": "Continue Shopping",
+			"OMN_ORDER_CLICKS": "Order Clicks",
+			"OMN_SYWR_UPDATE": "SYW Update Profile",
+			"OMN_RECALCULATE_POINTS": " Recalculate Points Button",
+			"OMN_SYW_REDEMPTION_THANKYOU": "SYW Points Redemption Thank You",
+			"OMN_SEARS_CARD_ACCOUNT_INFO": "Sears Card Account Lookup - Account Holder Info",
+			"OMN_CANCEL_BUTTON": "Cancel Button",
+			"OMN_KNOW_YOUR_MEMBER": "Know Your Member",
+			"OMN_RELATED_ITEMS": "Related Items",
+			"OMN_SUBMIT_KYM": "Know Your Member Submit",
+			"OMN_VIEW_FAQ": "View FAQ Button",
+			"OMN_SYW_REDEEM_SUCCESS": "SYW Points Redemption Success",
+			"OMN_SCAN_CARD": "Scan Card Button",
+			"OMN_TEST_ORDER_FLAG": "",
+			"OMN_CREDIT_REFERRAL": "Credit Referral",
+			"OMN_CREDIT_REFERRAL_REFERRAL_ERROR": "Invalid authorization code. Verify the number with the one provided by the credit department and try again",
+			"OMN_CREDIT_REFERRAL_SERVICE_REFERRAL_ERROR": "We are having technical difficulties. Please tap cancel and try another payment method.",
+			"OMN_PAIR_REGISTER_BUTTON": " Paired with register",
+			"OMN_PAIR_BUTTON": " Pair Button",
+			"OMN_PAIR_REGISTER": " Register Pairing",
+			"OMN_RAPID_CREDIT": "Rapid Credit Application",
+			"OMN_RAPID_CREDIT_COMMON": "Rapid Credit - ",
+			"OMN_RAPID_CREDIT_SIGNATURE": " Signature",
+			"OMN_RAPID_CREDIT_SSN": " Applicants SSN",
+			"OMN_RAPID_CREDIT_CUSTID": " Customer ID",
+			"OMN_RAPID_CREDIT_EDIT": " Edit Customer Info",
+			"OMN_RAPID_CREDIT_FINANCE": " Applicant's Financial Info",
+			"OMN_RAPID_CREDIT_DENIED": " Application Denied",
+			"OMN_RAPID_CREDIT_CUSTDATA": " Verify Customer Info",
+			"OMN_RAPID_CREDIT_APPROVAL": " Application Approved",
+			"OMN_RAPID_CREDIT_REFERRAL": " Referral",
+			"OMN_RAPID_CREDIT_NEXT_BUTTON": "Next Button",
+			"OMN_RAPID_CREDIT_RC_OFFER": "RC Offer",
+			"OMN_RAPID_CREDIT_INVALID_LOGIN": "The login ID you entered isn't valid. Please try again.",
+			"OMN_CREATE_CART": " Cart Created",
+			"OMN_OOS": " Product Out of Stock",
+			"OMN_PRINTER_CONNECT": "Printer Connect Button",
+			"OMN_PRINTER_DISCONNECT": "Printer Disconnect Button",
+			"OMN_PAYMENT_SUCCESS": "Payment Processed",
+			"OMN_PRINTER_SETUP": "Printer Setup",
+			"OMN_RAPID_CREDIT_STATUS": "Rapid Credit Status",
+			"OMN_ME_PROMPT_QUESTION": "Update Prompt Question",
+			"OMN_ME_EMAIL_UPDATE": "ME - Email Update",
+			"OMN_ME_MOBILE_UPDATE": "ME - Mobile Update",
+			"OMN_ME_HOME_ADDR_UPDATE": "ME - Home Address Update",
+			"OMN_ME_BIRTHDAY_UPDATE": "ME - Birthday Update",
+			"OMN_ME_HOME_PHONE_UPDATE": "ME - Home Phone Update",
+			"OMN_ME_PROFILE_UPDATE": "ME - Profile Update"
+		},
+		"unitTestConfig": {
+			"hosts": {
+				"host1": "https://host1",
+				"host2": "https://host2"
+			},
+			"versions": {
+				"v1": "/v1",
+				"v2": "/v2",
+				"override": {
+					"hostOverride": "https://host3"
+				}
+			},
+			"active": "host1"
+		}
+	},
+	"lmsActive": {
+		"sal1": "lmsQA",
+		"sal2": "lmsQA",
+		"sal3": "lmsQA",
+		"sal4": "lmsQA",
+		"sal5": "lmsQA",
+		"sal6": "lmsQA",
+		"sal7": "lmsQA",
+		"sal8": "lmsQA",
+		"salStag": "lmsProd",
+		"salPilot": "lmsProd",
+		"salProd": "lmsProd",
+		"salIss": "lmsProd"
+	},
+	"lmsUrlConfigSS": {
+		"hosts": {
+			"lmsQA": "https://appstest.searshc.com/Managementlead/LeadManagementAPI.svc",
+			"lmsProd": "https://apps.searshc.com/Managementlead/LeadManagementAPI.svc"
+		},
+		"active": {
+			"sal1": "lmsQA",
+			"sal2": "lmsQA",
+			"sal3": "lmsQA",
+			"sal4": "lmsQA",
+			"sal5": "lmsQA",
+			"sal6": "lmsQA",
+			"sal7": "lmsQA",
+			"sal8": "lmsQA",
+			"salStag": "lmsProd",
+			"salPilot": "lmsProd",
+			"salProd": "lmsProd",
+			"salIss": "lmsProd"
+		}
+	},
+	"lmsEndpointsSS": {
+		"associates": "/associates/",
+		"leads": "/leads/",
+		"createLead": "/leads",
+		"leadReasons": "/referencedata/lead/reasons",
+		"languages": "/referencedata/lead/languages",
+		"productStatus": "/referencedata/product/status",
+		"purchasedReasons": "/referencedata/product/purchasedreasons",
+		"notPurchasedReasons": "/referencedata/product/notpurchasedreasons",
+		"followupReasons": "/referencedata/product/followupreasons",
+		"sywrprofiles": "/sywrprofiles/",
+		"products": "/productcatalog/products/"
+	},
+	"login": {
+		"required": false,
+		"path": "/login",
+		"authType": "ASSOCIATE",
+		"hmacPrivateKey": "password123"
+	},
+	"kymDepartments": {
+		"15115": "FOOTWEAR",
+		"15185": "FOOTWEAR",
+		"15201": "FOOTWEAR",
+		"15301": "FOOTWEAR",
+		"15302": "FOOTWEAR",
+		"15467": "FOOTWEAR",
+		"19144": "LAND'S END",
+		"19244": "LAND'S END",
+		"20006": "Home Appliances",
+		"20042": "Home Appliances",
+		"20082": "HOUSEHOLD GOODS",
+		"20083": "HOUSEHOLD GOODS",
+		"20182": "HOUSEHOLD GOODS",
+		"20183": "HOUSEHOLD GOODS",
+		"20641": "Home Appliances",
+		"20642": "Home Appliances",
+		"22042": "Home Appliances",
+		"22100": "Home Appliances",
+		"22101": "Home Appliances",
+		"22102": "Home Appliances",
+		"22103": "Home Appliances",
+		"22104": "Home Appliances",
+		"22105": "Home Appliances",
+		"22106": "Home Appliances",
+		"22107": "Home Appliances",
+		"22108": "Home Appliances",
+		"22109": "Home Appliances",
+		"22110": "Home Appliances",
+		"22111": "Home Appliances",
+		"22112": "Home Appliances",
+		"22113": "Home Appliances",
+		"22114": "Home Appliances",
+		"22115": "Home Appliances",
+		"22116": "Home Appliances",
+		"22117": "Home Appliances",
+		"22118": "Home Appliances",
+		"22119": "Home Appliances",
+		"22120": "Home Appliances",
+		"22122": "Home Appliances",
+		"22123": "Home Appliances",
+		"22124": "Home Appliances",
+		"22125": "Home Appliances",
+		"22242": "Home Appliances",
+		"22300": "Home Appliances",
+		"22301": "Home Appliances",
+		"22302": "Home Appliances",
+		"22426": "Home Appliances",
+		"22462": "Home Appliances",
+		"22642": "Home Appliances",
+		"22646": "Home Appliances",
+		"22647": "Home Appliances",
+		"24000": "Home Appliances",
+		"25467": "FOOTWEAR",
+		"25692": "Home Improvement",
+		"26042": "Home Appliances",
+		"26242": "Home Appliances",
+		"29244": "LAND'S END",
+		"39041": "LAND'S END",
+		"39043": "LAND'S END",
+		"42101": "Home Appliances",
+		"42102": "Home Improvement",
+		"42103": "Home Appliances",
+		"44244": "FINE JEWELRY",
+		"44402": "FINE JEWELRY",
+		"44403": "FINE JEWELRY",
+		"44444": "FINE JEWELRY",
+		"46042": "Home Appliances",
+		"56261": "Home Appliances",
+		"56262": "Home Appliances",
+		"56263": "Home Appliances",
+		"56264": "Home Appliances",
+		"56571": "CONSUMER ELECTRONICS",
+		"56572": "CONSUMER ELECTRONICS",
+		"57071": "Home Improvement",
+		"57101": "Home Improvement",
+		"62646": "Home Appliances",
+		"62647": "Home Appliances",
+		"62649": "Home Appliances",
+		"65757": "CONSUMER ELECTRONICS",
+		"66261": "Home Appliances",
+		"66263": "Home Appliances",
+		"71101": "Home Improvement",
+		"71102": "Home Improvement",
+		"71103": "Home Improvement",
+		"76261": "Home Appliances",
+		"76263": "Home Appliances",
+		"82082": "HOUSEHOLD GOODS",
+		"82083": "HOUSEHOLD GOODS",
+		"82121": "HOUSEHOLD GOODS",
+		"82122": "HOUSEHOLD GOODS",
+		"82125": "HOUSEHOLD GOODS",
+		"82300": "HOUSEHOLD GOODS",
+		"82305": "HOUSEHOLD GOODS",
+		"91657": "CONSUMER ELECTRONICS",
+		"99004": "Home Appliances",
+		"01101": "Home Improvement",
+		"03102": "HOUSEHOLD GOODS",
+		"03105": "CONSUMER ELECTRONICS",
+		"03107": "CONSUMER ELECTRONICS",
+		"03120": "CONSUMER ELECTRONICS",
+		"03301": "CONSUMER ELECTRONICS",
+		"03104": "CONSUMER ELECTRONICS",
+		"03106": "CONSUMER ELECTRONICS",
+		"03108": "CONSUMER ELECTRONICS",
+		"06099": "Home Improvement",
+		"06100": "Home Improvement",
+		"06101": "Home Improvement",
+		"06102": "Home Improvement",
+		"06103": "Home Improvement",
+		"06104": "Home Improvement",
+		"06105": "Home Improvement",
+		"06106": "Home Improvement",
+		"06107": "Home Improvement",
+		"06108": "Home Improvement",
+		"06109": "Home Improvement",
+		"06110": "Home Improvement",
+		"06111": "Home Improvement",
+		"06130": "Home Improvement",
+		"06171": "Home Improvement",
+		"06182": "Home Improvement",
+		"06271": "Home Improvement",
+		"09030": "Home Improvement",
+		"09100": "Home Improvement",
+		"09101": "Home Improvement",
+		"09102": "Home Improvement",
+		"09104": "Home Improvement",
+		"09105": "Home Improvement",
+		"09106": "Home Improvement",
+		"09109": "Home Improvement",
+		"09110": "Home Improvement",
+		"09330": "Home Improvement",
+		"09342": "Home Improvement",
+		"09371": "Home Improvement",
+		"06400": "HOUSEHOLD GOODS",
+		"06089": "Home Improvement",
+		"03100": "CONSUMER ELECTRONICS",
+		"03103": "CONSUMER ELECTRONICS",
+		"00101": "HOME IMPROVEMENT",
+		"06079": "SPORTING GOODS"
+	},
+	"memberLevel": {
+		"BASE": "1",
+		"BONUS": "2"
+	},
+	"kymRequestorId": "SPSR",
+	"kymQuestionCap": 10,
+	"kymQuestionPrefix": "DC_",
+	"kymQuestionTextPrefix": "QuestionLine",
+	"kymDepartmentList": {
+		"consumer_electronics": {
+			"key": "Consumer Electronics",
+			"category": {
+				"camera": {
+					"key": "Camera",
+					"code": "DC_LMSCECamera"
+				},
+				"connected_solution": {
+					"key": "Connected Solution",
+					"code": "DC_LMSCEConnectedSolution"
+				},
+				"phone": {
+					"key": "Phone",
+					"code": "DC_LMSCEPhone"
+				},
+				"tablet": {
+					"key": "Tablet",
+					"code": "DC_LMSCETablet"
+				},
+				"tv": {
+					"key": "TV",
+					"code": "DC_LMSCETV"
+				}
+			}
+		},
+		"fine_jewelry": {
+			"key": "Fine Jewelry",
+			"category": {
+				"fine_jewelry": {
+					"key": "Fine Jewelry",
+					"code": "DC_LMSFineJewelry"
+				},
+				"watches": {
+					"key": "Watches",
+					"code": "DC_LMSWatch"
+				}
+			}
+		},
+		"home_appliances": {
+			"key": "Home Appliances",
+			"category": {
+				"cooking_and_cleanup-dishwasher": {
+					"key": "Cooking and Cleanup-Dishwasher",
+					"code": "DC_LMSHACookingCleanupDishwasher"
+				},
+				"cooking_and_cleanup-microwave": {
+					"key": "Cooking and Cleanup-Microwave",
+					"code": "DC_LMSHACookingCleanupMicrowave"
+				},
+				"cooking_and_cleanup-oven": {
+					"key": "Cooking and Cleanup-Oven",
+					"code": "DC_LMSHACookingCleanupOven"
+				},
+				"cooking_and_cleanup-range": {
+					"key": "Cooking and Cleanup-Range",
+					"code": "DC_LMSHACookingCleanupRange"
+				},
+				"laundry-dryer": {
+					"key": "Laundry-Dryer",
+					"code": "DC_LMSHALaundryDryer"
+				},
+				"laundry-washer": {
+					"key": "Laundry-Washer",
+					"code": "DC_LMSHALaundryWasher"
+				},
+				"refrigerator-freezer": {
+					"key": "Refrigerator-Freezer",
+					"code": "DC_LMSHAFridgeFreezer"
+				},
+				"vacuum-floorcare": {
+					"key": "Vacuum-Floorcare",
+					"code": "DC_LMSHAVacuumAndFloorcare"
+				}
+			}
+		},
+		"home_improvement": {
+			"key": "Home Improvement",
+			"category": {
+				"generators": {
+					"key": "Generators",
+					"code": "DC_LMSHIGenerator"
+				},
+				"grills": {
+					"key": "Grills",
+					"code": "DC_LMSHIGrill"
+				},
+				"lawn_mowers": {
+					"key": "Lawn Mowers",
+					"code": "DC_LMSHILAndGMower"
+				},
+				"lawn_tractors": {
+					"key": "Lawn Tractors",
+					"code": "DC_LMSHILAndGTractor"
+				},
+				"other_lawn_and_garden_products": {
+					"key": "Other Lawn and Garden Products",
+					"code": "DC_LMSHILAndGOther"
+				},
+				"patio": {
+					"key": "Patio",
+					"code": "DC_LMSHIPatio"
+				},
+				"snow_removal_equipment": {
+					"key": "Snow Removal Equipment",
+					"code": "DC_LMSHISnowRemoval"
+				},
+				"tools": {
+					"key": "Tools",
+					"code": "DC_LMSTool"
+				}
+			}
+		},
+		"household_goods": {
+			"key": "Household Goods",
+			"category": {
+				"mattress": {
+					"key": "Mattress",
+					"code": "DC_LMSMattress"
+				}
+			}
+		},
+		"home_fitness": {
+			"key": "Sporting Goods",
+			"category": {
+				"fitness-elliptical": {
+					"key": "Fitness-Elliptical",
+					"code": "DC_LMSSGElliptical"
+				},
+				"fitness-exercise_cycle": {
+					"key": "Fitness-Exercise Cycle",
+					"code": "DC_LMSSGExerciseCycle"
+				},
+				"fitness-incline_trainer": {
+					"key": "Fitness-Incline Trainer",
+					"code": "DC_LMSSGInclineTrainer"
+				},
+				"fitness-rower": {
+					"key": "Fitness-Rower",
+					"code": "DC_LMSSGRower"
+				},
+				"fitness-stepper": {
+					"key": "Fitness-Stepper",
+					"code": "DC_LMSSGStepper"
+				},
+				"fitness-strength_training": {
+					"key": "Fitness-Strength Training",
+					"code": "DC_LMSSGStrengthTraining"
+				},
+				"fitness-tread_mill": {
+					"key": "Fitness-Tread mill",
+					"code": "DC_LMSSGTreadmill"
+				},
+				"fitness-yoga_pilate": {
+					"key": "Fitness-Yoga Pilate",
+					"code": "DC_LMSSGYogaPilate"
+				}
+			}
+		}
+	},
+	"kymQuestionMapping": {
+		"LMSCECamera": {
+			"Attr_AnalyLMSCECamera101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera110": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSCECamera102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCECamera112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSCEConnectedSolution": {
+			"Attr_AnalyLMSCEConnectedSolution101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSCEConnectedSolution102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEConnectedSolution119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSCEPhone": {
+			"Attr_AnalyLMSCEPhone101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone111": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSCEPhone102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCEPhone113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSCETablet": {
+			"Attr_AnalyLMSCETablet101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet111": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSCETablet102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETablet113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSCETV": {
+			"Attr_AnalyLMSCETV101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV112": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSCETV102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSCETV114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSFineJewelry": {
+			"Attr_AnalyLMSFineJewelry095": {
+				"actionOn": [
+					"Buying for self",
+					"Buying a gift for someone"
+				],
+				"dependentQuestions": [
+					[
+						"Buying for self"
+					],
+					[
+						"Buying a gift for someone"
+					],
+					[
+						"Buying a gift for someone"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry096": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Anniversary"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Anniversary"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry097": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSFineJewelry101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry102": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSFineJewelry104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSFineJewelry111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSWatch": {
+			"Attr_AnalyLMSWatch095": {
+				"actionOn": [
+					"Buying a gift for someone"
+				],
+				"dependentQuestions": [
+					[
+						"Buying for self"
+					],
+					[
+						"Buying a gift for someone"
+					],
+					[
+						"Buying a gift for someone"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch096": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Anniversary"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Anniversary"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch097": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSWatch101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch102": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSWatch104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSWatch110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHACookingCleanupDishwasher": {
+			"Attr_AnalyLMSHADishwasher101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHACookingCleanupMicrowave": {
+			"Attr_AnalyLMSHAMicrowave101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAMicrowave119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHACookingCleanupOven": {
+			"Attr_AnalyLMSHAOven101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAOven119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHACookingCleanupRange": {
+			"Attr_AnalyLMSHARange101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHARange119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHALaundryDryer": {
+			"Attr_AnalyLMSHALaundryDryer101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryDryer119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHALaundryWasher": {
+			"Attr_AnalyLMSHALaundryWasher101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHALaundryWasher119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHAFridgeFreezer": {
+			"Attr_AnalyLMSHAFridgeFreezer101": {
+				"actionOn": [
+					"Replacing a broken / defective one"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer117": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAFridgeFreezer119": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHAVacuumAndFloorcare": {
+			"Attr_AnalyLMSHAVacuumAndFloorcare101": {
+				"actionOn": [
+					"Remodeling",
+					"Moving / New home",
+					"Upgrading",
+					"Replacing a broken / defective one",
+					"Other",
+					"No specific reason"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Replacing a broken / defective one"
+					],
+					[
+						"Remodeling",
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Other",
+						"No specific reason"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare119": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare120": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHADishwasher102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare103": {
+				"actionOn": [
+					"Yes",
+					"No, but I plan to have one"
+				],
+				"dependentQuestions": [
+					[
+						"Yes",
+						"No, but I plan to have one"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHAVacuumAndFloorcare121": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHIGenerator": {
+			"Attr_AnalyLMSHIGenerator101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator116": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator117": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHIGenerator102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGenerator118": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHIGrill": {
+			"Attr_AnalyLMSHIGrill101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill114": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHIGrill102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIGrill116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHILAndGMower": {
+			"Attr_AnalyLMSHILAndGMower102": {
+				"actionOn": [
+					"Moving / New home",
+					"Upgrading",
+					"Replacing a broken / defective one",
+					"Switching to DIY Lawn Care",
+					"Work or Business Purchase",
+					"Other",
+					"No specific reason"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Switching to DIY Lawn Care",
+						"Work or Business Purchase",
+						"Other",
+						"No specific reason"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower114": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHILAndGMower101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHILAndGTractor": {
+			"Attr_AnalyLMSHILAndGTractor102": {
+				"actionOn": [
+					"Moving / New home",
+					"Upgrading",
+					"Replacing a broken / defective one",
+					"Switching to DIY Lawn Care",
+					"Work or Business Purchase",
+					"Other",
+					"No specific reason"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Switching to DIY Lawn Care",
+						"Work or Business Purchase",
+						"Other",
+						"No specific reason"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor113": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHILAndGTractor101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGTractor115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHILAndGOther": {
+			"Attr_AnalyLMSHILAndGOther102": {
+				"actionOn": [
+					"Moving / New home",
+					"Upgrading",
+					"Replacing a broken / defective one",
+					"Switching to DIY Lawn Care",
+					"Work or Business Purchase",
+					"Other",
+					"No specific reason"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Switching to DIY Lawn Care",
+						"Work or Business Purchase",
+						"Other",
+						"No specific reason"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther114": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHILAndGOther101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGMower107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHILAndGOther116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHIPatio": {
+			"Attr_AnalyLMSHIPatio101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio115": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHIPatio102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHIPatio117": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSHISnowRemoval": {
+			"Attr_AnalyLMSHISnowRemoval101": {
+				"actionOn": [
+					"Moving / New home",
+					"Upgrading",
+					"Replacing a broken / defective one",
+					"Switching to DIY Snow removal",
+					"Work or Business Purchase",
+					"Other",
+					"No specific reason"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					],
+					[
+						"Moving / New home",
+						"Upgrading",
+						"Replacing a broken / defective one",
+						"Switching to DIY Snow removal",
+						"Work or Business Purchase",
+						"Other",
+						"No specific reason"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval114": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSHISnowRemoval102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHISnowRemoval116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSTool": {
+			"Attr_AnalyLMSTool102": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool111": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSTool101": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSTool113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSMattress": {
+			"Attr_AnalyLMSMattress101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress113": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress114": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSMattress102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress107": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSMattress116": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGElliptical": {
+			"Attr_AnalyLMSSGElliptical101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGElliptical102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGElliptical111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGExerciseCycle": {
+			"Attr_AnalyLMSSGExerciseCycle101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGExerciseCycle102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGExerciseCycle111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGInclineTrainer": {
+			"Attr_AnalyLMSSGInclineTrainer101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGInclineTrainer102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGInclineTrainer111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGRower": {
+			"Attr_AnalyLMSSGRower101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGRower102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGRower111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGStepper": {
+			"Attr_AnalyLMSSGStepper101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGStepper102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStepper111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGStrengthTraining": {
+			"Attr_AnalyLMSSGStrengthTraining101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining109": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining110": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGStrengthTraining102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining106": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGStrengthTraining112": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGTreadmill": {
+			"Attr_AnalyLMSSGTreadmill101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGTreadmill102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGTreadmill111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		},
+		"LMSSGYogaPilate": {
+			"Attr_AnalyLMSSGYogaPilate101": {
+				"actionOn": [
+					"Gifting"
+				],
+				"dependentQuestions": [
+					[
+						"Gifting"
+					],
+					[
+						"Gifting"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate108": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate109": {
+				"actionOn": [
+					"Birthday",
+					"Wedding",
+					"Engagement",
+					"Anniversary",
+					"Housewarming",
+					"Baby Shower",
+					"Graduation",
+					"Retirement"
+				],
+				"dependentQuestions": [
+					[
+						"Birthday",
+						"Wedding",
+						"Engagement",
+						"Anniversary",
+						"Housewarming",
+						"Baby Shower",
+						"Graduation",
+						"Retirement"
+					]
+				],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate110": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": true
+			},
+			"Attr_AnalyLMSSGYogaPilate102": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate103": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate104": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate105": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher114": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSHADishwasher115": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			},
+			"Attr_AnalyLMSSGYogaPilate111": {
+				"actionOn": "",
+				"dependentQuestions": [],
+				"isDate": false
+			}
+		}
+	},
+	"noImage": "images/no_image.jpg",
+	"sourceType": {
+		"ONLINE": "online",
+		"OFFLINE": "offline",
+		"SKINNY": "SKINNY"
+	},
+	"divisions": {
+		"PRODUCT_OPTIONS_ENABLED_B2_DIVISIONS": "044",
+		"PRODUCT_OPTIONS_ENABLED_B3_DIVISIONS": "044"
+	},
+	"stockstatus": {
+		"STOCK_STATUS_INSTOCK": "inStock",
+		"STOCK_STATUS_OUTOFSTOCK": "outOfStock",
+		"STOCK_STATUS_AVAILIN": "availIn",
+		"STOCK_STATUS_AVAILON": "availOn"
+	},
+	"applicableOffers": {
+		"memberNumber": "",
+		"messageVersion": "01",
+		"requestorID": "NPOS",
+		"currentDTTM": "",
+		"timeZone": "GMT-5:00",
+		"orderStoreNumber": "",
+		"tenderStoreNumber": "",
+		"pickUpStoreNumber": "",
+		"productList": {
+			"product": [
+				{
+					"lineItemAmountTypeCode": "",
+					"itemPrice": "",
+					"quantity": "1",
+					"hierarchyLevels": {
+						"hierarchyLevel": [
+							{
+								"levelCode": "4",
+								"levelValue": "",
+								"levelCodeDescription": "Division"
+							},
+							{
+								"levelCode": "8",
+								"levelValue": "",
+								"levelCodeDescription": "ItemNumber"
+							}
+						]
+					}
+				}
+			]
+		}
+	},
+	"defaultArrivalMethods": {
+		"020": "Take With",
+		"022": "Delivery",
+		"026": "Delivery",
+		"027": "Delivery",
+		"042": "Delivery",
+		"044": "Take With",
+		"046": "Delivery",
+		"082": "Delivery"
+	},
+	"url": {
+		"messageServerurl": "https://shopsearsvip.qa.ch3.s.com/mobileapi/v1"
+	},
+	"fallBackCtt": {
+		"status": true
+	},
+	"continueWithoutPINInd": {
+		"status": "Y"
+	},
+	"emvCodes": {
+		"cardApproved": "129",
+		"cardDeclined": "128",
+		"cardRemoved": "81",
+		"cardReadWithError": "1",
+		"cardBlocked": "10",
+		"offlineApproval1": "40",
+		"offlineApproval2": "50",
+		"fallBack": "25",
+		"pinEntryCancelled": "85",
+		"transactionTimedOut": "84"
+	},
+	"emvTagNames": {
+		"offlineApproval": "9F27",
+		"emvStatus": "Emv.Status"
+	},
+	"emvConstants": {
+		"cardDataInputCapability": "5",
+		"cardholderAuthenticationCapability": "1",
+		"operatingEnvironment": "1",
+		"cardholderPresent": "9",
+		"cardPresent": "1",
+		"cardDataInputMode": "5",
+		"cardDataInputModeFallback1": "9",
+		"cardDataInputModeFallback2": "2",
+		"cardholderAuthenticationEntity": "1",
+		"cardholderAuthenticationEntityDebit": "T",
+		"pinCaptureCapability": "1",
+		"posEntryMode": "05",
+		"otherAmount": "000000000000"
+	},
+	"emvMapping": {
+		"applicationInterchangeProfile": "82",
+		"dedicatedFileName": "84",
+		"terminalVerificationResult": "95",
+		"transactionDate": "9A",
+		"transactionType": "9C",
+		"transactionCurrencyCode": "5F2A",
+		"authorizedAmount": "9F02",
+		"otherAmount": "",
+		"terminalApplicationVersionNumber": "9F09",
+		"issuerApplicationData": "9F10",
+		"terminalCountryCode": "9F1A",
+		"interfaceDeviceSerialNumber": "9F1E",
+		"applicationCryptogram": "9F26",
+		"cryptogramInformationData": "9F27",
+		"terminalCapabilities": "9F33",
+		"cvmResults": "9F34",
+		"terminalType": "9F35",
+		"applicationTransactionCounter": "9F36",
+		"unpredictableNumber": "9F37",
+		"transactionSequenceCounter": "9F41",
+		"authorizationResponseCode": "8A",
+		"applicationExpirationDate": "5F24",
+		"applicationIdentifier": "9F06",
+		"applicationPANSequenceNumber": "5F34",
+		"applicationUsageControl": "9F07",
+		"chipConditionCode": "",
+		"cryptogramAmount": "",
+		"issuerAuthenticationData": "91",
+		"issuerScriptOneResults": "EQ24",
+		"terminalCapabilityProfile": "9F33",
+		"terminalSerialNumber": "9F1E",
+		"terminalTransactionDate": "9A",
+		"transactionCategoryCode": "9F53",
+		"pan": "5A",
+		"transactionTime": "9F21",
+		"iccAppVersionNum": "9F08",
+		"iacDenial": "9F0E",
+		"iacOnline": "9F0F",
+		"iacDefault": "9F0D",
+		"tacDenial": "",
+		"tacOnline": "",
+		"tacDefault": "",
+		"firstGenerateACTVR": "95",
+		"firstGenerateACIssuerApplData": "9F10",
+		"firstGenerateACApplCryptogram": "9F26",
+		"firstGenerateACCID": "9F27",
+		"secondGenerateACIssuerAuthenticationData": "91",
+		"secondGenerateACTVR": "95",
+		"secondGenerateACApplCryptogram": "9F26",
+		"secondGenerateACCID": "9F27",
+		"finalAuthResponseCode": "",
+		"finalTSI": "9B",
+		"applicationPreferredName": "EQ23",
+		"cardEntryMode": "",
+		"authCode": "EQ11",
+		"issuerScript": "EQ12",
+		"serviceCode": "5F30",
+		"tacData": "EQ05"
+	},
+	"activeHostname": "salProd",
+	"endpoint": {
+		"registerDevice": "/register/stores/"
+	},
+	"issFailureConstants": {
+		"skipIssCheck": [
+			"/ping",
+			"/register/track/sleds/",
+			"/castoken/tickets",
+			"/memberassist/auth/appLogin",
+			"/tenderstation/"
+		],
+		"preCart": [
+			"/products/details",
+			"/sywr/getapplicableoffersint",
+			"/product/productdeals",
+			"/items/retrieve991items",
+			"/recommendations",
+			"/recap/"
+		],
+		"inCart": [
+			"/carts/",
+			"/installation/options",
+			"/ssgateway/associateIdValidation"
+		],
+		"postCart": [
+			"/bincheck",
+			"/customer",
+			"/placeorder",
+			"/payments",
+			"/sywrredeemdetails",
+			"/receipts"
+		],
+		"skipErrorMsg": [
+			"/security/authenticate",
+			"/carts"
+		],
+		"globalNotificationPages": [
+			"/promotions/searscard"
+		]
+	},
+	"recap": {
+		"clientKey": {
+			"sal1": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal2": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal3": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal4": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal5": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal6": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal7": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"sal8": "1CA040D5-53D6-4E7C-8D36-1000C8B03A91",
+			"salStag": "E5AD4F76-F317-4E76-8A47-E66C1D4D3235",
+			"salPilot": "E5AD4F76-F317-4E76-8A47-E66C1D4D3235",
+			"salProd": "E5AD4F76-F317-4E76-8A47-E66C1D4D3235",
+			"salIss": "E5AD4F76-F317-4E76-8A47-E66C1D4D3235"
+		}
+	},
+	"features": [
+		{
+			"name": "suppressInstallationCalendar",
+			"description": "Supress Installation Calendar",
+			"toggle": "enabled"
+		},
+		{
+			"name": "featureTogglesAdmin",
+			"description": "Feature Toggle Admin Screen",
+			"toggle": "disabled"
+		},
+		{
+			"name": "errorsReviewPopup",
+			"description": "Errors Review Popup",
+			"toggle": "disabled"
+		},
+		{
+			"name": "serializeRequests",
+			"description": "Serialize Requests",
+			"toggle": "disabled"
+		},
+		{
+			"name": "updateFulfillment",
+			"description": " Update Cart Item Service",
+			"toggle": "enabled"
+		},
+		{
+			"name": "rapidCredit",
+			"description": "Rapid Credit",
+			"toggle": "enabled"
+		},
+		{
+			"name": "addAdditionalRequiredParts",
+			"description": "Add Required Parts",
+			"toggle": "enabled"
+		},
+		{
+			"name": "uncrateAndSetInPlace",
+			"description": "Uncrate and Set in place",
+			"toggle": "enabled"
+		},
+		{
+			"name": "smsOPTIn",
+			"description": "SMS OPT IN",
+			"toggle": "enabled"
+		},
+		{
+			"name": "deliveryRPAflag",
+			"description": "Delivery RPA Calendar Service",
+			"toggle": "disabled"
+		},
+		{
+			"name": "pciInterim",
+			"description": "PCI Interim",
+			"toggle": "enabled"
+		},
+		{
+			"name": "emvInterim",
+			"description": "EMV Interim",
+			"toggle": "enabled"
+		},
+		{
+			"name": "emvStoreBase",
+			"description": "EMV Store Base",
+			"toggle": "enabled"
+		},
+		{
+			"name": "closeSaleOffer",
+			"description": "close Sale Offer",
+			"toggle": "enabled"
+		},
+		{
+			"name": "consult",
+			"description": "CSE",
+			"toggle": "enabled"
+		},
+		{
+			"name": "consultPhase2",
+			"description": "CSE-Phase2",
+			"toggle": "enabled"
+		},
+		{
+			"name": "duress",
+			"description": "duress",
+			"toggle": "enabled"
+		},
+		{
+			"name": "transferCart",
+			"description": "Transfer Cart",
+			"toggle": "enabled"
+		},
+		{
+			"name": "CheckoutFlag",
+			"description": "Checkout enable flag",
+			"toggle": "enabled"
+		},
+		{
+			"name": "msrSwipeEMVStore",
+			"description": "MSR Swipe EMV Store",
+			"toggle": "disabled"
+		},
+		{
+			"name": "memberCart",
+			"description": "memberCart",
+			"toggle": "disabled"
+		},
+		{
+			"name": "brandName",
+			"description": "brandName",
+			"toggle": "enabled"
+		}
+	],
+	"lmsUrlConfig": {
+		"hosts": {
+			"lmsDev": "https://leadsapidev.searshc.com/v1",
+			"lmsQA": "https://leadsapiqa.searshc.com/v1",
+			"lmsProd": "https://leadsapi.searshc.com/v1",
+			"lmsStress": "https://leadsapistress.searshc.com/v1",
+			"lmsPosDev": "http://leadsapidev.searshc.com/v1",
+			"lmsPosQA": "http://leadsapiqa.searshc.com/v1",
+			"lmsPosProd": "http://leadsapi.searshc.com/v1",
+			"lmsPosStress": "http://leadsapistress.searshc.com/v1"
+		}
+	},
+	"lmsEndpoints": {
+		"associates": "/associates/",
+		"leads": "/leads/",
+		"lead": "/lead/",
+		"createLead": "/lead",
+		"leadReasons": "/referencedata",
+		"languages": "/referencedata/lead/languages",
+		"productStatus": "/referencedata",
+		"purchasedReasons": "/referencedata/product/purchasedreasons",
+		"notPurchasedReasons": "/referencedata/product/notpurchasedreasons",
+		"followupReasons": "/referencedata/product/followupreasons",
+		"sywrprofiles": "/sywrprofiles/",
+		"products": "/product/",
+		"login": "/tickets",
+		"associateDetails": "/associate/lookup/",
+		"associateLogin": "/associate/login/",
+		"sywr": "/Profile",
+		"associateLookup": "/associates/lookup/asc/",
+		"associateActivity": "/associate/activity/",
+		"leadAssign": "/lead/assign/",
+		"leadAccept": "/lead/accept/",
+		"telluride": "/roxy/telluride/rest/tellurideAS/Profile",
+		"closeLeads": "/leads/close",
+		"closeLead": "/lead/close/",
+		"recapDivs": "/division/fls/recapstatus/",
+		"transferlead": "/stores/transferLeadStore/"
+	},
+	"tellurideUrlConfig": {
+		"hosts": {
+			"lmsQA": "http://esbqa-med.intra.searshc.com/rest/tellurideAS",
+			"lmsProd": "http://esbqa-med.intra.searshc.com/rest/tellurideAS",
+			"lmsDev": "http://esbqa-med.intra.searshc.com/rest/tellurideAS"
+		}
+	},
+	"followUpQuestionsIds": [
+		"AD6B005056AC296311E4FDA4EF640190",
+		"AD6B005056AC296311E4FDA4EF946060",
+		"AD6B005056AC296311E4FDA4F3BE5B00",
+		"AD6B005056AC296311E4FDA4F3EDCF70",
+		"AD6B005056AC296311E4FDA4F5487D70",
+		"AD6B005056AC296311E4FDA4F57E8190",
+		"AD6B005056AC296311E4FDA4F680AF50",
+		"AD6B005056AC296311E4FDA4F6B246A0",
+		"AD6B005056AC296311E4FDA4F786FBC0",
+		"AD6B005056AC296311E4FDA4F7B49B70",
+		"AD6B005056AC296311E4FDA4ED289080",
+		"AD6B005056AC296311E4FDA4ED3E1450",
+		"AD6B005056AC296311E4FDA4ED85CBB0",
+		"AD6B005056AC296311E4FDA4ABE1BFC0",
+		"AD6B005056AC296311E4FDA4AC539460",
+		"AD6B005056AC296311E4FDA4AC20C490",
+		"AD6B005056AC296311E4FDA4ADB23A00",
+		"AD6B005056AC296311E4FDA4ADE72CB0",
+		"AD6B005056AC296311E4FDA4AF567420",
+		"AD6B005056AC296311E4FDA4AF860FA0",
+		"AD6B005056AC296311E4FDA4B0DA5500",
+		"AD6B005056AC296311E4FDA4B10B7720",
+		"AD6B005056AC296311E4FDA4BCD3AB90",
+		"AD6B005056AC296311E4FDA4BD0012C0",
+		"AD6B005056AC296311E4FDA4BB67BF80",
+		"AD6B005056AC296311E4FDA4BB9AB660",
+		"AD6B005056AC296311E4FDA4B9D25270",
+		"AD6B005056AC296311E4FDA4BA20E7A0",
+		"AD6B005056AC296311E4FDA4BE4ED9E0",
+		"AD6B005056AC296311E4FDA4BE833050",
+		"AD6B005056AC296311E4FDA4C47F2BD0",
+		"AD6B005056AC296311E4FDA4C4AD67C0",
+		"AD6B005056AC296311E4FDA4C5A29D30",
+		"AD6B005056AC296311E4FDA4C5D08B00",
+		"AD6B005056AC296311E4FDA4C6973660",
+		"AD6B005056AC296311E4FDA4C6C8A6A0",
+		"AD6B005056AC296311E4FDA4CCAF1E50",
+		"AD6B005056AC296311E4FDA4CCE374C0",
+		"AD6B005056AC296311E4FDA4C7B94830",
+		"AD6B005056AC296311E4FDA4C7E90AC0",
+		"AD6B005056AC296311E4FDA4CEEBC7E0",
+		"AD6B005056AC296311E4FDA4CF2379B0",
+		"AD6B005056AC296311E4FDA4CDE3CDC0",
+		"AD6B005056AC296311E4FDA4CE10D130",
+		"AD6B005056AC296311E4FDA4EC093DD0",
+		"AD6B005056AC296311E4FDA4EC3F41F0",
+		"AD6B005056AC296311E4FDA4D91B33E0",
+		"AD6B005056AC296311E4FDA4D94FB160",
+		"AD6B005056AC296311E4FDA4E00008C0",
+		"AD6B005056AC296311E4FDA4E02E92D0",
+		"AD6B005056AC296311E4FDA4DF1FBAE0",
+		"AD6B005056AC296311E4FDA4DF4C4920",
+		"AD6B005056AC296311E4FDA4D75EB6D0",
+		"AD6B005056AC296311E4FDA4D78CF2C0",
+		"AD6B005056AC296311E4FDA4D8384DF0",
+		"AD6B005056AC296311E4FDA4D8681080",
+		"AD6B005056AC296311E4FDA4DE079420",
+		"AD6B005056AC296311E4FDA4DE35A900",
+		"AD6B005056AC296311E4FDA4D6843550",
+		"AD6B005056AC296311E4FDA4D6E47DC0",
+		"AD6B005056AC296311E4FDA4D6B68FF0",
+		"AD6B005056AC296311E4FDA4E102ABB0",
+		"AD6B005056AC296311E4FDA4E1394C10",
+		"AD6B005056AC296311E4FDA4CFFF33B0",
+		"AD6B005056AC296311E4FDA4D02C3720",
+		"AD6B005056AC296311E4FDA4EE52B8A0",
+		"AD6B005056AC296311E4FDA4EE646BE0",
+		"AD6B005056AC296311E4FDA4EEAE4620"
+	],
+	"loginUrlConfig": {
+		"hosts": {
+			"lmsQA": "https://shchandheld-qa.intra.searshc.com/casWeb/v1",
+			"lmsProd": "https://shchandheld.intra.searshc.com/casWeb/v1",
+			"lmsDev": "https://shchandheld-qa.intra.searshc.com/casWeb/v1",
+			"lmsStress": "https://shchandheld.intra.searshc.com/casWeb/v1"
+		}
+	},
+	"associateUrlConfig": {
+		"hosts": {
+			"lmsQA": "http://sbo-int.intra.searshc.com/DEJInterfaces/v1",
+			"lmsProd": "http://hfdvsbointjbos1.vm.itg.corp.us.shldcorp.com:8180/DEJInterfaces/v1"
+		}
+	},
+	"paginationSize": 10,
+	"sessionTimeOut": 45,
+	"redirectTimeOut": 3,
+	"storeId": "10153",
+	"debitAscreditTablet": false,
+	"debitAscreditHandheld": true,
+	"UpgradeAndCompetitorDetailsContent": [
+		{
+			"divNo": "071",
+			"lineNo": "81"
+		},
+		{
+			"divNo": "071",
+			"lineNo": "25"
+		},
+		{
+			"divNo": "071",
+			"lineNo": "45"
+		}
+	],
+	"jobCode": "FL81R7;FL28R7;FL26R7;FLASMT;FL05R3;FL15R3;FL19R3;FL24R3;FL81R3;FL28R3;FL26R3;FL06R1;FLOCEX;FL6005;FLCALP;FL06R2;FL66R2;FL02R7;FL02R6;FLRSMT;FL0022;FL53R4;FL58R4;FL57R4;FL51R4;FL56R4",
+	"dev": {
+		"upc": "604095224800",
+		"partNumber": "04410084000"
+	},
+	"webUrlServer": {
+		"sal1": "https://mcp-salvip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal2": "https://mcp-sal2vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal3": "https://mcp3-salvip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal4": "https://mcp4-sal2vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal5": "https://mcp5-sal3vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal6": "https://mcp6-sal3vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal7": "https://mcp-sal3vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"sal8": "https://mcp-sal4vip.qa.ch3.s.com/mobileapi/v2/webappurl",
+		"salStag": "https://mobilesalvip.stag.ch4.s.com/mobileapi/v2/webappurl",
+		"salPilot": "https://mobilesalint-pilotvip.prod.ch4.s.com/mobileapi/v2/webappurl",
+		"salProd": "https://mobilesalint.prod.global.s.com/mobileapi/v2/webappurl",
+		"e2eMockeyServer": "http://localhost:5050/mobileapi/v2/webappurl",
+		"e2eRecorderServer": "http://localhost:5050/mobileapi/v2/webappurl"
+	},
+	"tenderStation": {
+		"messagingServerUrl": {
+			"sal1": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal2": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal3": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal4": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal5": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal6": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal7": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"sal8": "https://shopsears25vip.qa.ch3.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"salStag": "http://shopsears25vip.stag.ch4.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"salPilot": "https://shopsears25-pilotvip.prod.ch4.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"salProd": "https://shopsears25.prod.global.s.com/mobileapi/v1/callback/messageprocessing/eventchannel",
+			"salIss": "https://shopsears25.prod.global.s.com/mobileapi/v1/callback/messageprocessing/eventchannel"
+		}
+	},
+	"reportAnIssuse": {
+		"ssGroupId": {
+			"sal1": "0_307",
+			"sal2": "0_307",
+			"sal3": "0_307",
+			"sal4": "0_307",
+			"sal5": "0_307",
+			"sal6": "0_307",
+			"sal7": "0_307",
+			"sal8": "0_307",
+			"salStag": "0_4588",
+			"salPilot": "0_4588",
+			"salProd": "0_4588",
+			"salIss": "0_4588"
+		},
+		"hostNameValues": {
+			"sal1": "qa.pebble2.searshc.com",
+			"sal2": "qa.pebble2.searshc.com",
+			"sal3": "qa.pebble2.searshc.com",
+			"sal4": "qa.pebble2.searshc.com",
+			"sal5": "qa.pebble2.searshc.com",
+			"sal6": "qa.pebble2.searshc.com",
+			"sal7": "qa.pebble2.searshc.com",
+			"sal8": "qa.pebble2.searshc.com",
+			"salStag": "pebble2.searshc.com",
+			"salPilot": "pebble2.searshc.com",
+			"salProd": "pebble2.searshc.com",
+			"salIss": "pebble2.searshc.com"
+		},
+		"wmGroupId": {
+			"sal1": "0_308",
+			"sal2": "0_308",
+			"sal3": "0_308",
+			"sal4": "0_308",
+			"sal5": "0_308",
+			"sal6": "0_308",
+			"sal7": "0_308",
+			"sal8": "0_308",
+			"salStag": "0_8616",
+			"salPilot": "0_8616",
+			"salProd": "0_8616",
+			"salIss": "0_8616"
+		},
+		"ssHashTagTablet": "#SHOPHELP25TABLET",
+		"wmHashTagTablet": "#TellUs25TABLET",
+		"ssHashTagHH": "#SHOPHELP25HANDHELD",
+		"wmHashTagHH": "#TellUs25HANDHELD",
+		"tagVal": "shopsears",
+		"inReplytoID": "0",
+		"uniqReqId": "1044500599796348844SO",
+		"appSecret": "3374328745a04Dea8e0bc2e25cd50438",
+		"sourceName": "SHOPsears",
+		"viewFAQ": "invoke:webLinks?webLink=https://referencedocs.searshc.com/alfresco/service/tsgrp/sears/retail/ui/streamContent?id=workspace://SpacesStore/2f3b3929-9a8d-4b56-8320-d1dd3b202114"
+	},
+	"ipaVersionMsg": {
+		"warningMsg": "A new version of application is available in app store. Please update.",
+		"errorMsg": "Please update the application from the app store to continue!!"
+	},
+	"updates": "<div class='inline-header-large box pad-box text-right'> <font color='#56A3ED'><strong>Welcome to SHOPsears!</strong></font> </div> <div class='inline-header-small box pad-box text-right updatedDate'> <font color='#56A3ED'><i><strong>Updated: February 10, 2017</strong></i></font> </div> <div class='inline-block box pad-box'> <font color='#56A3ED'><strong>Enhancement:</strong></font> <hr> <p> <ul class='bullet'> <li><strong>Transfer of Cart:</strong> is now enabled for all stores. Simply create your cart in SHOPsears as you do now, then transfer and retrieve at POS with your sales ID.  Pairing is a thing of the past!  All payment is now handled by the register – including checks!  Refer to the <a href='invoke:webLinks?webLink=https://referencedocs.searshc.com/alfresco/service/tsgrp/sears/retail/ui/streamContent?id=workspace://SpacesStore/f07243d2-39dd-459c-b0f9-15f5e11b85a6' target='_blank'><strong>Transfer of Cart Job Aid</strong></a> in the SHOPsears User Guide (available in the Menu) and in SHCConnect for further information as well as FAQs.</li> </ul> </p> </div> <font color='#56A3ED'><strong>Reminder:</strong></font> <hr> <ul> <li><strong>User Guide:</strong>&nbsp;Available through the MENU. This provides training documents as well as all pertinent job aids.</li> <li><strong>Close the Sale:</strong>&nbsp;This feature is intended to increase close rates by providing new ‘Personalized Offers’. This functionality will provide SYW members with real-time targeted offers which can be used in the event that the associate feels an additional discount may save the sale.</li> <li><strong>Duress Availability:</strong>&nbsp;This is part of the new LMS2 that has just been released.  Check out the Product Results page for this new feature.  When a member is in immediate need of an item you can use their criteria to narrow the results; then use the <i>Product Availability </i>button to determine delivery dates.  What a great way to service our members!.</li> <li><strong>Priority Leads Dashboard:</strong>&nbsp;The new Leads page shows a <strong>Recap Summary </strong> with WTD, Rolling 28 Days and YTD tabs.  All leads, including Meet with an Expert, are in one place.  Closed leads can be searched by member or by a date range.  Check out the job aids in the User Guide for more details.</li> <li><strong>Mobile Phone Validation:</strong>&nbsp;Mobile phone fields will now validate the number.</li> <div class='inline-block box pad-box'> <font color='#56A3ED'><strong>Tips:</strong></font> <hr> <p> <strong>Associate Log In:</strong> <ul class='bullet'> <li>Do you ever pick up an iPad or handheld and you are not sure if you are logged in? Your name can be found on the Updates page. Select Updates from the Menu at any time to view this. <br> <br> <strong><u> NOTE:</u></strong> The associate logged into SHOPsears must use his/her Associate ID on the register to retrieve their cart.</li> </ul> </p> </div> <div class='inline-block box pad-box'> <font color='#56A3ED'><strong>Device Management:</strong></font> <hr> <p> <li>Make sure your devices and sleds are all fully functioning. Please direct your management team to report broken iPads, iHelds and sleds in a timely manner. They can call the Service Desk at 1-800-998-1500 to create a service request to get a shipping label sent to your store. Don't wait to ship multiple devices at a time; use 2-Day shipping.</br> Ensure that all devices are plugged in and charging each night.</li> <br> <li> <strong><u> NOTE:</u></strong> Only the larger brick will properly charge the iPad. These can be ordered through Ariba – item MD836LL/A. <br> If you are not able to log into a device when receiving it back from the Depot pebble the serial number in the SHOPsears pebble group so it can be provisioned to your store. </li> </p> </div> <div class='inline-block box pad-box'> <font color='#56A3ED'><strong>Support:</strong></font> <hr> <p> <li>Please use the Report an Issue function to report any feedback or issues you have with SHOPsears. Your issues will display in the SHOPsears Pebble group.Support teams are closely monitoring this Pebble group and can assist you as you provide valuable feedback.</li> </p> </div> <div class='inline-block box pad-box'> <font color='#56A3ED'><strong>Reminder:</strong></font> <hr> <p>For optimal performance, make sure you have the latest versions of SHOPsears and iOS on your device. To view this information, select About SHOPsears from the menu.</p> </div> <div class='inline-block box pad-box'><strong>Latest SHOPsears version:</strong> IPA 1.7</div> <div class='inline-block box pad-box' style='font-size:smaller'>(iPad and handheld will always have the same IPA version)</div> <div class='inline-block box pad-box'><strong>Latest iOS version iPads and iHeld 5:</strong> 9.3.5</div> <div class='inline-block box pad-box'><strong>Latest iOS version iHeld 4:</strong> 6.1.6</div> <div class='inline-block box pad-box'> <p class='inline-block'>If your device isn't running the latest version, download it immediately, or contact the SHOPsears Help Desk or Pebble Support (see below).</p> <p class='inline-block'>SHOPsears Help Desk: <font color='#56A3ED'><strong>1-800-998-1500 </strong></font>(press 6 for SHOPsears support)</p> <p class='inline-block'>Pebble Support: Use the Report an Issue button to report issues and concerns.</p> <p class='inline-block'>Hoffman support team will be actively monitoring Pebble and responding as needed</p> <p class='inline-block'>Crisis management issues will be communicated through the Retail Services ALERTS process.</p> <p class='inline-block'>Be sure to follow the SHOPsears group on Pebble for real-time notifications of issues and fixes.</p></div>",
+	"copyright": "© 2014 Sears Brands, LLC. All Rights Reserved.",
+	"buildDate": "Thu Sep 18 2014 11:07:17 GMT-0500 (CDT)",
+	"buildVersion": 1,
+	"sledTracking": {
+		"SLED_STATUS_THRESHOLD": 5
+	},
+	"changeFilterHash": {
+		"freeShipping": {
+			"0": "No",
+			"1": "Yes"
+		},
+		"shipping": {
+			"0": "No",
+			"1": "Yes"
+		},
+		"freeDelivery": {
+			"0": "No",
+			"1": "Yes"
+		},
+		"delivery": {
+			"0": "No",
+			"1": "Yes"
+		},
+		"discount": {
+			"1": "All discounted items",
+			"20": "20% or more",
+			"30": "30% or more",
+			"50": "50% or more",
+			"70": "70% or more"
+		},
+		"has991": {
+			"0": "No",
+			"1": "Yes"
+		},
+		"new": {
+			"30": "30 days or less",
+			"60": "60 days or less",
+			"90": "90 days or less"
+		},
+		"trustedSeller": {
+			"0": "No",
+			"1": "Yes"
+		}
+	},
+	"splash": {
+		"enableSplash": true,
+		"intervalInMins": "3",
+		"flagUrl": "health/shopsears-splash-flag.html",
+		"splashUrl": "splash/shopsears-error.html"
+	},
+	"timeoutConstants": {
+		"PROD_OFFSET": 0,
+		"QA_OFFSET": 0,
+		"DEFAULT_TIMEOUT": 100000,
+		"apiCalls": {
+			"/AUTHENTICATE": 7000,
+			"/ping": 3000,
+			"/webappurl": 3000,
+			"/security/authenticate": 11000,
+			"/products/browse/subcategory": 46000,
+			"/products/search": 45000,
+			"/product/upc": 11000,
+			"/products/reviews": 5000,
+			"/products/{ID}/options": 10000,
+			"/sywr/getapplicableoffersint": 7000,
+			"/installation/options": 12000,
+			"/carts": 17000,
+			"/carts/{ID}/items": 42000,
+			"/carts/{ID}": 22000,
+			"/carts/{ID}/items/{ID}": 25000,
+			"/carts/{ID}/items/{ID}/availableoptions": 10000,
+			"/carts/{ID}/items/{ID}/options": 60000,
+			"/carts/{ID}/items/{ID}/options/{ID}": 25000,
+			"/carts/{ID}/placeorder": 76000,
+			"/orders/{ID}": 70000,
+			"/carts/{ID}/customer/requireinformation": 19000,
+			"/carts/{ID}/giftreceipts": 10000,
+			"/carts/{ID}/customer": 19000,
+			"/carts/{ID}/items/{ID}/priceoverride": 25000,
+			"/carts/{ID}/payments/authorize": 45000,
+			"/carts/{ID}/payments/complete": 45000,
+			"/carts/{ID}/payments/{ID}": 45000,
+			"/carts/{ID}/payments": 45000,
+			"/carts/{ID}/promotions/searscard": 35000,
+			"/payment/balanceEnquiry": 22000,
+			"/carts/{ID}/promotions": 21000,
+			"/carts/{ID}/fulfillmentaddress": 20000,
+			"/carts/{ID}/fulfillmentaddress/{ID}": 20000,
+			"/carts/{ID}/sywrredeemdetails": 21000,
+			"/carts/{ID}/promotions/{ID}": 19000,
+			"/associate/pointbalance": 5000,
+			"/carts/{ID}/shippingdetails": 18000,
+			"/carts/{ID}/calendar": 25000,
+			"/delivery/prices": 50000,
+			"/shipping/restrictions": 9000,
+			"/location/zipcode/{ID}": 3000,
+			"/receipts": 61000,
+			"/inventory/check": 45000,
+			"/tenderstation/reservedevice": 10000,
+			"/tenderstation/devicestatus": 6500,
+			"/tenderstation/keepalive": 220000,
+			"/tenderstation/releasedevice": 10000,
+			"/tenderstation/opencashdrawer": 10000,
+			"/tenderstation/cashdrawerstatus": 10000,
+			"/tenderstation/printreceipt": 100000,
+			"/tenderstation/enablecardswipe": 12000,
+			"/tenderstation/requestpin": 10000,
+			"/tenderstation/verifyamount": 10000,
+			"/tenderstation/cancelcttrequest": 10000,
+			"/tenderstation/cttstatus": 10000,
+			"/payment/cards/bincheck": 33000,
+			"/carts/order/current": 10000,
+			"/carts/{ID}/giftcardrebates": 22000,
+			"/register/devices/{ID}": 7000,
+			"/recap/managementlead/leadmanagementapi.svc/productcatalog/fls/divisions": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/lead/languages": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/lead/reasons": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/purchasedreasons": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/notpurchasedreasons": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/followupreasons": 30000,
+			"/recap/managementlead/leadmanagementapi.svc/leads/{ID}": 45000,
+			"/recap/managementlead/leadmanagementapi.svc/associates/{ID}/leads": 45000,
+			"/recap/managementlead/leadmanagementapi.svc/productcatalog/products/{ID}/{ID}": 30000,
+			"/retrieveselectedprinter": 5000,
+			"/fetchdepartmentandprinterlist": 5000,
+			"/ssgateway/editzebraprinter": 5000,
+			"/ssgateway/addzebraprinter": 5000,
+			"/ssgateway/deletezebraprinter": 5000,
+			"/ssgateway/mapassociatetoprinter": 5000,
+			"/getdivlinesubline": 5000,
+			"/ssgateway/fetchCompetitor": 5000,
+			"/ssgateway/adjustprice": 5000,
+			"/ssgateway/getMemberCart": 5000,
+			"/ssgateway/manageridvalidation": 5000,
+			"/ssgateway/associateidvalidation": 5000,
+			"/products/details/{ID}": 46000,
+			"/products/categorysearch": 46000,
+			"/products/browse/category": 6000,
+			"/products/browse/departments": 6000,
+			"/register/track/sleds/{ID}/stores/{ID}": 3000,
+			"/finders": 2000,
+			"/castoken/tickets": 5000,
+			"/pebble/postmessagetoagroup": 5000
+		},
+		"restrictApi": {
+			"/products/details/": 46000,
+			"/items/retrieve991items": 5000,
+			"/register/stores/": 7000,
+			"/recommendations": 10000
+		},
+		"notificationApi": [
+			"/Managementlead/LeadManagementAPI",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/followupreasons",
+			"/recap/managementlead/leadmanagementapi.svc/productcatalog/fls/divisions",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/lead/languages",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/lead/reasons",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/purchasedreasons",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/notpurchasedreasons",
+			"/recap/managementlead/leadmanagementapi.svc/referencedata/product/followupreasons",
+			"/recap/managementlead/leadmanagementapi.svc/leads/{ID}",
+			"/recap/managementlead/leadmanagementapi.svc/associates/{ID}/leads",
+			"/products/search",
+			"/products/categorysearch",
+			"/products/browse/category",
+			"/products/browse/departments",
+			"/carts/{ID}/items/{ID}/priceoverride",
+			"/products/details/",
+			"/pebble/postmessagetoagroup"
+		]
+	},
+	"enableMobileValidation": true,
+	"errorMessageMap": {
+		"cart_add_item_500_item_notavailable_error": "This item is currently not available. Please choose another fulfillment method or try again later.",
+		"cart_add_item_409_item_notavailable_error": "This item is currently out of stock.",
+		"cart_add_item_409_part_not_found": "The part or accessory could not be located in our database. ",
+		"cart_add_item_409_irs_service_failed": "This item could not be found in our database. Please verify the item's unit number and try again.",
+		"cart_add_item_409_giftcard_not_valid": "This card number is invalid. Please use a new card.",
+		"cart_add_item_409_price_not_found": "The price could not be found.",
+		"cart_add_item_400_validation_error": "Missing required parameters and/or invalid parameters/values.",
+		"cart_update_item_409_item_notavailable_error": "The item you're trying to add is not available.",
+		"cart_add_productoptions_409_item_notavailable_error": "One of the parts or accessories you selected is out of stock. Please return to Product Details and select a different fulfillment method or remove the item from the cart and choose a different item.",
+		"cart_add_productoptions_500_item_notavailable_error": "One of the parts or accessories you selected isn't available. Please return to Product Details and select a different fulfillment method or remove the item from the cart and choose a different item.",
+		"cart_add_productoptions_409_part_not_found": "One of the parts or accessories you selected isn't available. Please return to Product Details and select a different fulfillment method or remove the item from the cart and choose a different item.",
+		"cart_add_productoptions_409_cart_attacheditem_invalidtype": "The item you selected can't be shipped. It must be delivered. Please return to Product Details and select Delivery as the fulfillment method",
+		"cart_add_productoptions_409_cart_attacheditem_requiredpartmissing": "The item you selecte'u2019t be installed without the required parts. Please return to Product Options and select the required parts for this item.",
+		"cart_add_productoptions_409_cart_attacheditem_installationunsupported": "The item you selected can't be installed.Please return to Product Options and select None or remove the item from the cart and choose a different item.",
+		"cart_add_promotions_409_invalid_promo": "Invalid promotion. Please try again.",
+		"payment_add_400_payment_debitcardkey_required": "A PIN is required for debit card transactions.",
+		"payment_add_409_payment_authorize_failure": "Payment authorization failed. Please try again.",
+		"payment_add_409_payment_cash_nodeviceregisterid": "Cash payment cannot be added because a register is not paired. Make sure a register is present or choose another payment method.",
+		"payment_add_409_payment_creditcard_required": "A credit card is mandatory for water filter subscriptions.",
+		"payment_add_409_payment_debitcard_decline": "Debit card authorization failed. Please add another form of payment.",
+		"payment_add_409_payment_debitcard_externalformaterror": "Invalid debit card number. Please re-enter number.",
+		"payment_add_409_payment_debitcard_pinincorrect": "Invalid PIN. Please re-enter PIN.",
+		"payment_add_409_payment_debitcard_pintranslateerror": "Invalid PIN. Please re-enter PIN.",
+		"payment_add_409_payment_debitcard_pintriesexceeded": "The limit of attempts to enter a PIN has been exceeded. Please enter another form of payment.",
+		"payment_add_409_payment_debitcard_verifycarderror": "Debit card authorization failed. Please add another form of payment.",
+		"payment_add_409_payment_debitcard_wrongmessage": "Card number was not recognized. Please re-enter card number.",
+		"payment_add_409_payment_error": "Rewards points can only be applied to one transaction.",
+		"payment_add_409_payment_giftcard_failure": "Your gift card could not be authorized.",
+		"payment_add_409_payment_giftCard_insufficientbalance": "Please make sure a balance on your gift card can be applied.",
+		"payment_add_409_payment_searscard_required": "Only a Sears card can be applied to this promotion. ",
+		"payment_add_409_payment_sywr_applyfailure": "Failure to apply SYWR card. Please try again.",
+		"payment_add_409_payment_sywr_failure": "Failure to authorize SYWR. Please try again.",
+		"payment_add_409_payment_sywr_wrongsequence": "Your account number must be entered to use points.",
+		"payment_add_409_payment_transaction_zeroamountdue": "A gift card payment was already applied. Please choose another form of payment.",
+		"payment_add_409_transaction_authorize_failure": "Your payment could not be redeemed. Please choose another form of payment.",
+		"payment_add_409_transaction_authorize_funds_error": "Insufficient balance for this transaction. Please choose another form of payment.",
+		"payment_add_409_transaction_authorize_processing_error": "Your transaction could not be authorized. Please choose another form of payment.",
+		"payment_add_409_transaction_authorize_reverted": "Your transaction was successfully reversed.",
+		"payment_add_409_transaction_authorize_validate_failure": "Payment validation failed. Please choose another form of payment.",
+		"payment_add_409_transaction_reversal_success": "Your transaction was successfully reversed.",
+		"payment_add_409_unsupported_operation": "Payment not supported. Please choose another form or payment.",
+		"payment_add_500_payment_authorize_notprocessed": "Your payment could not be processed.",
+		"payment_add_500_payment_debitcard_internalformaterror": "Card number was not recognized. Please re-enter card number.",
+		"payment_add_500_transaction_authorize_processing_error": "An error occurred while trying to add payment.",
+		"payment_complete_400_payment_creditcard_required": "A credit card is mandatory for water filter subscriptions.",
+		"payment_complete_409_payment_authorize_error": "This card has already been authorized for payment and cannot be used again.",
+		"payment_complete_409_payment_authorize_failure": "A method of payment could not be authorized.",
+		"payment_complete_409_payment_authorize_notprocessed": "Your transaction was successfully reversed.",
+		"payment_complete_409_payment_authorize_reverted": "A method of payment could not be authorized.",
+		"payment_complete_409_payment_giftcard_failure": "Invalid gift card number. Please re-enter or use a different card.",
+		"payment_complete_409_payment_sywr_applyfailure": "A portion of your rewards points could not be redeemed. Proceed without redeeming points",
+		"payment_complete_409_payment_sywr_failure": "Your account number could not be authorized. Please re-enter or proceed without redeeming points.",
+		"payment_complete_409_transaction_authorize_error": "Your transaction could not be authorized. Please choose another form of payment.",
+		"payment_complete_409_transaction_authorize_failure": "A method of payment could not be authorized.",
+		"payment_complete_409_transaction_authorize_funds_error": "Not enough balance is available to complete payment. Please choose another form of payment.",
+		"payment_complete_409_transaction_authorize_reverted": "Your transaction has been reversed. Please re-enter payment information.",
+		"payment_complete_409_transaction_authorize_validate_failure": "Your transaction could not be authorized. Please choose another form of payment.",
+		"payment_complete_409_transaction_reversal_success": "Your transaction was successfully reversed.",
+		"payment_complete_409_unsupported_operation": "Payment authorization failed. Please try again.",
+		"balance_enquiry_409_payment_balanceenquiry_error": "Your entire balance could not be shown.",
+		"balance_enquiry_409_payment_balanceenquiry_partialsuccess": "Your entire balance could not be shown.",
+		"balance_enquiry_409_payment_giftcard_activecard": "This gift card is already active.",
+		"balance_enquiry_409_payment_giftcard_expiredcard": "This gift card is expired.",
+		"balance_enquiry_409_payment_giftcard_inactiveaccount": "Inactive gift card. Please try a different card.",
+		"balance_enquiry_409_payment_giftcard_invalid": "Invalid card number. Please try again.",
+		"balance_enquiry_409_payment_giftcard_required": "Please enter a gift card number.",
+		"balance_enquiry_409_payment_giftcardpin_invalidformat": "Invalid PIN. Please re-enter PIN.",
+		"balance_enquiry_409_payment_sywr_invalid": "Invalid ID. Please try again.",
+		"balance_enquiry_409_payment_sywr_invalidlength": "Invalid ID. Please try again.",
+		"bin_lookup_409_payment_binlookup_giftcard": "Your gift card number could not be located. Please re-enter number.",
+		"fulfillment_calendar_400_cart_calendar_error": "The calendar could not be found. Please go back and try again.",
+		"fulfillment_calendar_409_cart_calendar_nodeliveryitemsincart": "Delivery items are not present in the cart. Please go back and try again.",
+		"fulfillment_calendar_409_cart_calendar_error": "The shipping address was not updated. Please go back and try again.",
+		"fulfillment_calendar_409_cart_calendar_notapplicable": "The delivery calendar is not applicable for this cart.",
+		"fulfillment_calendar_409_cart_calendar_reservationfailed": "The IPD item reservation failed. Please go back and try again.",
+		"fullfillment_details_409_notableto_reserve_item": "The item is not available at the specified address. Please select a different address.",
+		"fullfillment_details_409_item_delivery_shippingrestricted": "There is a shipping restriction for this item. Please select a different address.",
+		"fullfillment_details_409_item_notavailable_error": "The item is not available at the specified address. Please select a different address.",
+		"fullfillment_details_409_cart_item_notavailable": "There is a shipping restriction for this item. Please select a different address.",
+		"shipping_details_409_shipping_addresstype_notsupported": "The item cannot be shipped to the following address type: APO/FPO/PO. Please enter a new shipping address.",
+		"shipping_details_409_shipping_carrier_notsupported": "The carrier to ship this item is not supported. Please select a different shipping option.",
+		"shipping_details_409_shipping_location_restricted": "The item cannot be shipped to this location. Please select a different shipping address.",
+		"shipping_details_409_shipping_item_restricted": "There is a restriction in shipping this item. Please select a different shipping option.",
+		"shipping_details_409_shipping_mode_notfound": "A shipping mode is not available for this address. Please select a different shipping option.",
+		"sywr_redeemdetails_409_payment_sywrenquiry_failure": "Your SYWR points could not be redeemed. Please choose another form of payment.",
+		"service_failure": "Service Failure",
+		"cart_add_item_409_placeorder_attacheditem_notavailable": "One of the parts or accessories you selected is out of stock. Please return to Product Details and select a different fulfillment method or remove the item from the cart and choose a different item."
+	}
+}]
